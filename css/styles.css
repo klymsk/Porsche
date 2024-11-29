@@ -145,20 +145,22 @@ article {
     gap: 10rem;
 }
 
+.cars img {
+    box-shadow: 2px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* car to left */
+
 .carToLeft {
     display: flex;
     flex-direction: row;
     gap: 2.5rem;
 }
 
-.carToLeft img {
-    box-shadow: 2px 0px 15px rgba(0, 0, 0, 0.5);
-}
-
 .infoPrice {
     display: flex;
     flex-direction: column;
-    gap: 4.5rem;
+    gap: 4rem;
 }
 
 .carInfo {
@@ -200,6 +202,78 @@ article {
     color: #4F4F4F;
     font-weight: var(--font-weight-bold);
 }
+
+.carPrice {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    user-select: none;
+}
+
+.carPrice h2, h3 {
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: var(--font-weight-regular);
+    color: var(--font-color)
+}
+
+.carPrice h2 {
+    font-size: 2rem;
+    font-weight: var(--font-weight-bold);
+}
+
+/* car to right */
+
+.carToRight {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 2.5rem;
+}
+
+/* preFooter */
+
+.preFooter {
+    position: relative;
+}
+
+.preFooter img {
+    width: 100%;
+    height: auto;
+}
+
+.preFooter h2 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+/* footer */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #292929;
+    padding: 0rem 7.5rem;
+}
+
+.menuButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.footerButton {
+    text-decoration: none;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: var(--font-weight-bold);
+    color: #FBF8EF;
+    transition: all 0.3 ease;
+}
+
 
 
 

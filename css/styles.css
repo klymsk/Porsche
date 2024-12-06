@@ -115,7 +115,17 @@ nav {
     z-index: 1000;
     overflow: hidden;
     display: none;
-    transition: opacity 0.3 ease-in-out;
+    transition: all 0.3s ease;
+}
+
+.contactsMenu.visible {
+    display: flex; 
+    opacity: 1;
+}
+
+.contactsMenu.hidden {
+    opacity: 0;
+    display: none;
 }
 
 .contactsMenu li {
@@ -164,6 +174,91 @@ nav {
     opacity: 0.5;
     filter: grayscale(100%);
     transform: scaleX(-1);
+}
+
+.servicesMenu {
+    position: absolute;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #D9D9D9;
+    padding: 2rem 3rem;
+    list-style: none;
+    border-radius: 10px;
+    z-index: 1000;
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.servicesMenu.visible {
+    display: flex; 
+    opacity: 1;
+}
+
+.servicesMenu.hidden {
+    opacity: 0;
+    display: none;
+}
+
+.servicesMenu a {
+    text-decoration: none;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: var(--font-weight-regular);
+    color: #4F4F4F;
+    transition: all 0.3s ease;
+}
+
+.servicesMenu a:hover {
+    font-weight: var(--font-weight-bold);
+}
+
+.accessoriesMenu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #D9D9D9;
+    padding: 2rem 3rem 7rem 3rem;
+    overflow: hidden;
+    list-style: none;
+    display: none;
+    border-radius: 10px;
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.accessoriesMenu.visible {
+    display: flex; 
+    opacity: 1;
+}
+
+.accessoriesMenu.hidden {
+    opacity: 0;
+    display: none;
+}
+
+.accessoriesMenu a {
+    text-decoration: none;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: var(--font-weight-regular);
+    color: #4F4F4F;
+    transition: all 0.3s ease;
+}
+
+.accessoriesMenu a:hover {
+    font-weight: var(--font-weight-bold);
+}
+
+.accessoriesMenu img {
+    position: absolute;
+    top: 8rem;
+    left: 8rem;
+    opacity: 0.5;
 }
 
 
@@ -219,8 +314,37 @@ article {
 .mainPhoto {
     width: 100%;        
     max-width: 100%;   
-    height: auto;     
+    height: 800px;  
+    object-fit: cover;   
     display: block;
+    transition: all 1s ease-in-out; 
+}
+
+.ellipses {
+    position: absolute; 
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center; 
+    left: 50%;
+    transform: translateX(-50%);
+    top: 90%;
+}
+
+.ellipseMain {
+    width: 20px;         
+    height: 20px;         
+    border-radius: 50%;  
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;   
+    transition: transform 0.3s ease, border 0.3s ease; 
+}
+
+.ellipseMain:hover {
+    transform: scale(1.1); 
+}
+
+.ellipseMain.active {
+    border: 2px solid #ff0000; 
 }
 
 /* blockquote */

@@ -7,7 +7,7 @@
 body {
     display: flex;
     flex-direction: column;
-    gap: 6rem;
+    gap: 12rem;
 }
 
 /* header - nav */
@@ -43,12 +43,16 @@ nav {
 
 .navButton {
     text-decoration: none;
-    font-family: "Unbounded";
+    font-family: var(--font-family);
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: var(--font-weight-regular);
     color: #4F4F4F;
     transition: all 0.3s ease;
     position: relative;
+}
+
+.navButton:first-of-type {
+    font-weight: var(--font-weight-bold);
 }
 
 .navButton:hover {
@@ -281,70 +285,68 @@ main {
 
 article {
     position: relative;
-}
-
-.articleTxt {
-    position: absolute;
-    top: 2rem;
-    left: 2rem;
-    text-decoration: none;
-}
-
-.articleTxt h1, h2 {
-    font-family: var(--font-family);
-    font-size: 2.5rem;
-    font-weight: var(--font-weight-bold);
-    color: #C7C7C7;
-    transition: all 0.5 ease;
-}
-
-.articleTxt h2 {
-    font-size: 1.75rem;
-    font-weight: var(--font-weight-regular);
-}
-
-.articleTxt h1:hover {
-    color: #FFF985;
-}
-
-.articleTxt h2:hover {
-    color: #FFF985;
-}
-
-.mainPhoto {
-    width: 100%;        
-    max-width: 100%;   
-    height: 800px;  
-    object-fit: cover;   
-    display: block;
-    transition: all 1s ease-in-out; 
-}
-
-.ellipses {
-    position: absolute; 
+    padding: 0rem 8rem;
     display: flex;
-    gap: 1.5rem;
-    justify-content: center; 
-    left: 50%;
-    transform: translateX(-50%);
-    top: 90%;
+    flex-direction: column;
+    gap: 15rem;
 }
 
-.ellipseMain {
-    width: 20px;         
-    height: 20px;         
-    border-radius: 50%;  
+/* containerCar */
+
+.typeContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+    position: relative;
+}
+
+.typeContainer h1 {
+    position: absolute;
+    top: -10%;
+    font-family: var(--font-family);
+    font-size: 2rem;
+    font-weight: 600;
+    color: #4F4F4F;
+}
+
+.carContainer {
+    padding: 3rem 1.5rem 2rem 1.5rem;
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    cursor: pointer;   
-    transition: transform 0.3s ease, border 0.3s ease; 
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.ellipseMain:hover {
-    transform: scale(1.1); 
+.carContainer:hover {
+    background-color: #F1F1F1;
 }
 
-.ellipseMain.active {
-    border: 2px solid #ff0000; 
+.carContainer h2, h3 {
+    font-family: var(--font-family);
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-regular);
+    color: black;
+}
+
+.carContainer h3 {
+    font-weight: 500;
+}
+
+.carContainer p {
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: 200;
+    color: black;
+}
+
+.addInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 2rem;
 }
 
 /* blockquote */
@@ -373,133 +375,33 @@ article {
     max-width: 600px;
 }
 
-/* cars */
-
-.cars {
-    display: flex;
-    flex-direction: column;
-    gap: 10rem;
-}
-
-.cars img {
-    box-shadow: 2px 0px 15px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    transition: all 0.3s ease;
-}
-
-.cars img:hover {
-    scale: 1.05;
-}
-
-/* car to left */
-
-.carToLeft {
-    display: flex;
-    flex-direction: row;
-    gap: 2.5rem;
-}
-
-.infoPrice {
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-}
-
-.carInfo {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.carInfo a.headerOfCar {
-    text-decoration: none;
-    font-family: var(--font-family);
-    font-size: 2rem;
-    font-weight: var(--font-weight-bold);
-    color: var(--font-color);
-    transition: all 0.5s ease;
-}
-
-.carInfo a.headerOfCar:hover {
-    color: #4F4F4F;
-}
-
-.infoList {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.carInfo .infoList a {
-    text-decoration: none;
-    font-family: var(--font-family);
-    font-size: 1rem;
-    font-weight: var(--font-weight-regular);
-    color: var(--font-color);
-    transition: all 0.5s ease;
-}
-
-.infoList a:hover {
-    color: #4F4F4F;
-    font-weight: var(--font-weight-bold);
-}
-
-.carPrice {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    user-select: none;
-}
-
-.carPrice h2, h3 {
-    font-family: var(--font-family);
-    font-size: 1rem;
-    font-weight: var(--font-weight-regular);
-    color: var(--font-color)
-}
-
-.carPrice h2 {
-    font-size: 2rem;
-    font-weight: var(--font-weight-bold);
-}
-
-/* car to right */
-
-.carToRight {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    gap: 2.5rem;
-}
-
-.carToRight .infoButton,
-.carToRight .carPrice h2, .carToRight .carPrice h3 {
-    display: flex;
-    justify-content: flex-end;
-}
-
-
 /* preFooter */
 
 .preFooter {
-    position: relative;
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
 }
 
-.preFooter img {
-    width: 100%;
-    height: auto;
+.question {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 37rem;
 }
 
-.preFooter a {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    text-decoration: none;
+.question h2 {
     font-family: var(--font-family);
-    font-size: 2.5rem;
-    font-weight: var(--font-weight-bold);
-    color: #C7C7C7;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #4F4F4F;
+}
+
+.question p {
+    font-family: var(--font-family);
+    font-size: 0.8rem;
+    font-weight: var(--font-weight-regular);
+    color: #292929;
 }
 
 /* footer */
@@ -534,12 +436,3 @@ footer img {
     color: #FBF8EF;
     transition: all 0.3 ease;
 }
-
-
-
-
-
-
-
-
-

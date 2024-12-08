@@ -8,6 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 6rem;
+    background-color: #FBF8EF;
 }
 
 /* header - nav */
@@ -71,6 +72,16 @@ nav {
     transition: opacity 0.3s ease-in-out;
 }
 
+.subMenu.visible {
+    display: grid; 
+    opacity: 1;
+}
+
+.subMenu.hidden {
+    opacity: 0;
+    display: none;
+}
+
 .subMenu a {
     display: flex;
     flex-direction: column;
@@ -97,11 +108,6 @@ nav {
     border-radius: 10px;
 }
 
-.navButton:hover + .subMenu,
-.subMenu:hover {
-    display: grid;
-    opacity: 1;
-}
 
 .contactsMenu {
     position: absolute;

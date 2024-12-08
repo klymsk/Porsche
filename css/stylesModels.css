@@ -8,6 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 12rem;
+    background-color: #FBF8EF;
 }
 
 /* header - nav */
@@ -51,7 +52,7 @@ nav {
     position: relative;
 }
 
-.navButton:first-of-type {
+.nav-list > li:first-of-type > .navButton {
     font-weight: var(--font-weight-bold);
 }
 
@@ -296,8 +297,11 @@ article {
 .typeContainer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 5rem;
+    display: flex;
+    justify-content: space-between;
     position: relative;
+    width: auto;
+    height: auto;
 }
 
 .typeContainer h1 {
@@ -319,6 +323,8 @@ article {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     cursor: pointer;
     transition: all 0.3s ease;
+    max-width: 30%;
+    height: auto;
 }
 
 .carContainer:hover {

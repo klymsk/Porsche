@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth; 
+}
+
+
 body {
     display: flex;
     flex-direction: column;
@@ -288,15 +293,15 @@ article {
     padding: 3rem 6rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
     background-color: #493628;
 }
 
-.article img {
+article img {
     max-width: 100%;  
     height: auto; 
     display: flex;
     justify-content: center;
+    transform: scale(0.8);
 }
 
 .modelCar {
@@ -318,9 +323,9 @@ article {
     font-size: 1rem;
 }
 
+/* detailInfo */
+
 .detailInfo {
-    display: flex;
-    justify-content: space-around;
     margin-top: 8rem;
     background-color: #FBF8EF;
     border-radius: 20px;
@@ -328,16 +333,64 @@ article {
     text-align: center;
 }
 
-.detailInfo p {
+.detailInfo ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.detailInfo li {
     font-family: var(--font-family);
     font-size: 1rem;
     font-weight: var(--font-weight-regular);
     color: #493628;
 }
 
-.detailInfo p span {
+.detailInfo li span {
     font-size: 1.5rem;
     font-weight: var(--font-weight-bold);
+}
+
+/* buttons */
+
+.buttons {
+    padding: 0 9.5rem;
+    margin: 8rem 0rem;
+}
+
+.buttons ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.buttons li {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    background-color: #493628;
+    border: 5px solid #FBF8EF;
+    border-radius: 20px;
+    width: 240px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.buttons li:hover {
+    background-color: #FBF8EF;
+}
+
+.buttons a {
+    text-decoration: none;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: var(--font-weight-regular);
+    color: #FBF8EF;
+    transition: all 0.3s ease;
+}
+
+.buttons li:hover a {
+    color: #493628;
 }
 
 /* footer */

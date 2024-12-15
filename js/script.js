@@ -1,4 +1,4 @@
-const buttonModel = document.querySelector(".navButton");
+const buttonModel = document.querySelector("#buttonModels");
 const subMenu = document.querySelector(".subMenu");
 
 const buttonContacts = document.querySelector("#buttonContacts");
@@ -31,6 +31,7 @@ function AddRemMenu(button, menu) {
     });
 }
 
+AddRemMenu(buttonModel, subMenu);
 AddRemMenu(buttonContacts, contactsMenu);
 AddRemMenu(buttonServices, servicesMenu);
 AddRemMenu(buttonAccessories, accessoriesMenu);
@@ -39,10 +40,12 @@ AddRemMenu(buttonAccessories, accessoriesMenu);
 function ImageSwipe() {
     const articleImg = document.querySelector(".mainPhoto"); 
     const arrImg = [
-        "img/MainPhoto1.png",  
-        "img/Cayenne.jpg",  
-        "img/Taycan.jpg",  
-        "img/Macan.jpg"   
+        "img/General/MainPhoto1.png",  
+        "img/General/MainPhoto2.jpg",  
+        "img/General/MainPhoto3.jpg",  
+        "img/General/MainPhoto4.jpg",
+        "img/General/MainPhoto5.jpg",
+        "img/General/MainPhoto6.jpg"
     ];
     const ellipses = document.querySelectorAll(".ellipseMain");
 
@@ -77,27 +80,25 @@ document.addEventListener('DOMContentLoaded', function() {
     ImageSwipe();  
 });
 
+function Converted() {
+    const currency = document.querySelector("#price");
+    const exchangeRate = 41;
 
-buttonModel.addEventListener('mouseenter', () => {
-    subMenu.style.display = "grid";
-    subMenu.style.opacity = "1";
-})
+    currency.addEventListener('click', () => {
+        const priceText = currency.innerText;
+        const prices = priceText.match(/\d+/g); 
 
-buttonModel.addEventListener('mouseleave', () => {
-    subMenu.style.opacity = '0';
-    setTimeout(() => {
-        subMenu.style.display = "none";
-    }, 300);
-})
+        if (prices && prices.length === 2) {
+            const minPrice = parseInt(prices[0].replace(/\s/g, '')); 
+            const maxPrice = parseInt(prices[1].replace(/\s/g, ''));
 
-subMenu.addEventListener('mouseenter', () => {
-    subMenu.style.display = "grid";
-    subMenu.style.opacity = "1";
-});
+            const minPriceConverted = minPrice * exchangeRate;
+            const maxPriceConverted = maxPrice * exchangeRate;
 
-subMenu.addEventListener('mouseleave', () => {
-    subMenu.style.opacity = '0';
-    setTimeout(() => {
-        subMenu.style.display = "none";
-    }, 300);
-});
+            currency.innerHTML = `${minPriceConverted.toLocaleString()} - <br> ${maxPriceConverted.toLocaleString()} грн`;
+        }
+    });
+}
+
+Converted();
+

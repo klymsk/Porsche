@@ -401,7 +401,12 @@ article img {
     align-items: center;
 }
 
-.generalInfo .text h2, .text p {
+.generalInfo img {
+    max-width: 80%;
+}
+
+.generalInfo .text h2, 
+.text p {
     font-family: var(--font-family);
     font-size: 1.5rem;
     font-weight: var(--font-weight-bold);
@@ -424,10 +429,11 @@ article img {
     display: flex;
     flex-direction: column;
     gap: 10rem;
-    padding: 0rem 10rem;
+    padding: 0rem 7rem;
 }
 
-.testDrive h2, .testDrive h3 {
+.testDrive h2, 
+.testDrive h3 {
     display: flex;
     justify-content: center;
     font-family: var(--font-family);
@@ -512,6 +518,8 @@ article img {
 }
 
 .choice button {
+    display: flex;
+    justify-content: center;
     background-color: #493628;
     padding: 1rem 5rem;
     border-radius: 20px;
@@ -524,11 +532,8 @@ article img {
 
 .carChoice {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-}
-
-.carChoice img {
-    transform: scale(0.5);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
 }
 
 .carChoice li {
@@ -537,6 +542,211 @@ article img {
     font-size: 0.8rem;
     font-weight: var(--font-weight-bold);
     color: #4F4F4F;
+    padding: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carChoice li:hover, 
+.carChoice li:active {
+    background-color: #493628;
+    border-radius: 20px;
+    color: #FBF8EF;
+}
+
+/* techInfo */
+
+.techInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    position: relative;
+    margin-bottom: 35rem;
+    padding: 0rem 7rem;
+}
+
+.techInfo h3 {
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-family);
+    font-size: 2rem;
+    font-weight: var(--font-weight-bold);
+}
+
+.techInfo .techChoice img {
+    position: absolute;
+    top: 1rem;
+    left: -7rem;
+}
+
+.techChoice ul {
+    position: absolute;
+    right: -4rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-right: 25rem;
+}
+
+.techChoice ul details {
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: var(--font-weight-regular);
+}
+
+.techChoice ul summary {
+    font-size: 1.5rem;
+}
+
+/* sales */
+
+.sales {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding: 0rem 7rem;
+}
+
+.sales h3 {
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-family);
+    font-size: 2rem;
+    font-weight: var(--font-weight-bold);
+}
+
+.sales p {
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: var(--font-weight-regular);
+    color: #FBF8EF;
+}
+
+.optionSales {
+    background-color: #493628;
+    border-radius: 20px;
+    padding: 3rem;
+    position: relative;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.optionSales:hover {
+    padding: 3.25rem;
+}
+
+.optionSales img:first-of-type {
+    position: absolute;
+    top: -3rem;
+    left: -3rem;
+    filter: blur(2px);
+    transition: all 0.3s ease;
+}
+
+.optionSales img:last-of-type {
+    position: absolute;
+    bottom: -3rem;
+    right: -3rem;
+    filter: blur(2px);
+    transition: all 0.3s ease;
+}
+
+.optionSales:hover img {
+    transform: scale(1.1);
+}
+
+.price {
+    background-color: #7E634F;
+    border-radius: 20px;
+    padding: 3rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.price img {
+    position: absolute;
+    top: -10rem;
+    left: -20rem;
+    transform: scale(0.7);
+}
+
+.price p {
+    direction: rtl;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+/* configurator */
+
+.configurator {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    padding: 0rem 7rem;
+}
+
+.headerSection h2,
+.headerSection h3 {
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-family);
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.headerSection h3 {
+    font-size: 2rem;
+    font-weight: var(--font-weight-bold);
+}
+
+.menuConfigurator {
+    display: flex;
+}
+
+.preView {
+    background-color: #493628;
+    border-radius: 20px;
+    padding: 5rem;
+}
+
+.preView p {
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-family);
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-bold);
+    color: #FBF8EF;
+}
+
+.preView img {
+    transform: scale(0.5);
+}
+
+.configuratorChoice {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+}
+
+.configuratorChoice details {
+    font-family: var(--font-family);
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-regular);
+}
+
+.configuratorChoice details ul {
+    list-style: none;
+}
+
+.color {
+    display: flex;
+}
+
+.color button {
+    width: 60px;
+    height: 60px;
+    background-color: white;
 }
 
 /* footer */

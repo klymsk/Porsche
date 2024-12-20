@@ -16,10 +16,10 @@
         </a>
         <nav>
             <ul class="nav-list">
-                <li><a href="#" class="navButton">Моделі</a></li>
+                <li><a href="#" class="navButton" id = "buttonModels">Моделі</a></li>
                     <ul class="subMenu">
                         <li>
-                            <a href="#">
+                            <a href="models.html">
                                 <p>Porsche Taycan</p>
                                 <img src = "img/Menu/TaycanMenu.png" alt = "Porsche Taycan">
                             </a>
@@ -118,7 +118,7 @@
             <section class = "typeContainer">
                 <h1>Taycan</h1>
     
-                <a href = "modelPage.html" class = "carLink">
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('Taycan')">
                     <div class = "carContainer">
                         <img src = "img/Porsche Taycan/TaycanModel.png" alt = "Taycan">
         
@@ -135,7 +135,7 @@
                     </div>
                 </a>
     
-                <a href = "modelPage.html" class = "carLink">
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('Taycan4S')">
                     <div class = "carContainer">
                         <img src = "img/Porsche Taycan/Taycan4SModel.png" alt = "Taycan">
         
@@ -152,7 +152,7 @@
                     </div>
                 </a>
     
-                <a href = "modelPage.html" class = "carLink">
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('TaycanTurboGT')">
                     <div class = "carContainer">
                         <img src = "img/Porsche Taycan/TaycanTurboGtModel.png" alt = "Taycan">
         
@@ -173,7 +173,7 @@
             <section class = "typeContainer">
                 <h1>Taycan Cross Turismo</h1>
     
-                <a href = "modelPage.html" class = "carLink">
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('Taycan4SCrossTurismo')">
                     <div class = "carContainer">
                         <img src = "img/Porsche Taycan/Taycan4SCross.png" alt = "Taycan">
         
@@ -320,6 +320,6 @@
         </section>
     </footer>
 
-    <script src = "js/script.js"></script>
+    <script src = "js/scriptModels.js"></script>
 </body>
 </html>

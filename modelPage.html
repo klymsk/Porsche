@@ -16,10 +16,10 @@
         </a>
         <nav>
             <ul class="nav-list">
-                <li><a href="#" class="navButton">Моделі</a></li>
+                <li><a href="#" class="navButton" id = "buttonModels">Моделі</a></li>
                     <ul class="subMenu">
                         <li>
-                            <a href="#">
+                            <a href="models.html">
                                 <p>Porsche Taycan</p>
                                 <img src = "img/Menu/TaycanMenu.png" alt = "Porsche Taycan">
                             </a>
@@ -115,31 +115,39 @@
 
     <main>
         <article>
-            <div class = "modelCar">
-                <h1>Taycan</h1>
-                <h2><span>від</span> 100 000$</h2>
+            <!-- Назва та ціна моделі -->
+            <div class="modelCar">
+                <h1 id="modelName">Taycan</h1> <!-- Тут буде динамічно вставлятися назва моделі -->
+                <h2 id="modelPrice"><span>від</span> 100 000$</h2> <!-- Тут буде динамічно вставлятися ціна моделі -->
             </div>
-
-            <img src = "img/Porsche Taycan/TaycanModelPage.png" alt = "Taycan">
-
-            <div class = "detailInfo">
-                <ul>
-                    <li><span>462</span><br>Потужність (к/с)</li>
-                    <li><span>250 км/год</span><br>Максимальна швид.</li>
-                    <li><span>~520 км</span><br>Запас ходу</li>
-                    <li><span>3,7 с</span><br>Прискорення</li>
+        
+            <!-- Зображення моделі -->
+            <img id="modelImage" src="img/Porsche Taycan/TaycanModelPage.png" alt="Taycan"> <!-- Тут буде динамічно вставлятися зображення моделі -->
+        
+            <!-- Детальні характеристики моделі -->
+            <div class="detailInfo">
+                <ul id="modelDetails">
+                    <!-- Тут будуть динамічно вставлятися характеристики -->
+                    <!-- Наприклад:
+                        <li><span>462</span><br>Потужність (к/с)</li>
+                        <li><span>250 км/год</span><br>Максимальна швид.</li>
+                        <li><span>~520 км</span><br>Запас ходу</li>
+                        <li><span>3,7 с</span><br>Прискорення</li>
+                    -->
                 </ul>
             </div>
-
-            <div class = "buttons">
+        
+            <!-- Кнопки для додаткових функцій -->
+            <div class="buttons">
                 <ul>
-                    <li><a href = "#testDrive">Тест-Драйв</a></li>
-                    <li><a href = "#">Тех. харак.</a></li>
-                    <li><a href = "#">Конфігуратор</a></li>
-                    <li><a href = "#">Пропозиції</a></li>
+                    <li><a href="#testDrive">Тест-Драйв</a></li>
+                    <li><a href="#">Тех. харак.</a></li>
+                    <li><a href="#">Конфігуратор</a></li>
+                    <li><a href="#">Пропозиції</a></li>
                 </ul>
             </div>
         </article>
+        
 
         <section class = "generalInfo">
             <img src = "img/Porsche Taycan/PorscheTaycanModel.png" alt = "Taycan">
@@ -286,21 +294,27 @@
                     <details>
                         <summary>Колір кузова</summary>
     
-                        <ul class = "color">
-                            <li><button></button></li>
-                            <li><button></button></li>
-                            <li><button></button></li>
-                            <li><button></button></li>
-                            <li><button></button></li>
-                        </ul>
-        
-                        <ul class = "color">
-                            <li><button></button></li>
-                            <li><button></button></li>
-                            <li><button></button></li>
-                            <li><button></button></li>
-                            <li><button></button></li>
-                        </ul>
+                        <fieldset>
+                            <legend>Металік</legend>
+                            <ul class="color">
+                                <li><button data-color="white"></button></li>
+                                <li><button data-color="black"></button></li>
+                                <li><button data-color="green"></button></li>
+                                <li><button data-color="brown"></button></li>
+                                <li><button data-color="red"></button></li>
+                            </ul>
+                        </fieldset>
+                    
+                        <fieldset>
+                            <legend>Матовий</legend>
+                            <ul class="color">
+                                <li><button data-color="pink"></button></li>
+                                <li><button data-color="purple"></button></li>
+                                <li><button data-color="blue"></button></li>
+                                <li><button data-color="dark-blue"></button></li>
+                                <li><button data-color="gray"></button></li>
+                            </ul>
+                        </fieldset>
                     </details>
     
                     <details>
@@ -323,7 +337,7 @@
                         </ul>
                     </details>
     
-                    <button>Продовжити конфігурацію</button>
+                    <button class = "continueButton">Продовжити конфігурацію</button>
                 </div>
             </div>
         </section>
@@ -348,5 +362,6 @@
         </section>
     </footer>
 
-    <script></script>
+    <script src = "js/scriptModelPage.js"></script>
 </body>
+</html>

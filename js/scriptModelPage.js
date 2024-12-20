@@ -43,8 +43,31 @@ AddRemMenu(buttonAccessories, accessoriesMenu);
 carChoiceItems.forEach(item => {
     item.addEventListener('click', function() {
         item.classList.toggle('active');
-    });
+    })
 });
+
+const selectedModel = JSON.parse(localStorage.getItem('selectedModel'));
+
+if (selectedModel) {
+  document.getElementById('modelName').textContent = selectedModel.name;
+  document.getElementById('modelPrice').innerHTML = `<span>від</span> ${selectedModel.price}`;
+  document.getElementById('modelImage').src = selectedModel.pageImage;
+  document.getElementById('modelImage').alt = selectedModel.name;
+  
+  document.getElementById('modelDetails').innerHTML = `
+    <li><span>${selectedModel.power}</span><br>Потужність (к/с)</li>
+    <li><span>${selectedModel.maxSpeed}</span><br>Максимальна швид.</li>
+    <li><span>${selectedModel.range}</span><br>Запас ходу</li>
+    <li><span>${selectedModel.acceleration}</span><br>Прискорення</li>
+  `;
+} else {
+  alert('Дані моделі не знайдено!');
+}
+
+
+
+
+
 
 
 

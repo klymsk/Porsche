@@ -49,16 +49,12 @@ nav {
 
 .navButton {
     text-decoration: none;
-    font-family: var(--font-family);
+    font-family: "Unbounded";
     font-size: 1rem;
-    font-weight: var(--font-weight-regular);
+    font-weight: 400;
     color: #4F4F4F;
     transition: all 0.3s ease;
     position: relative;
-}
-
-.nav-list > li:first-of-type > .navButton {
-    font-weight: var(--font-weight-bold);
 }
 
 .navButton:hover {
@@ -79,6 +75,16 @@ nav {
     border-radius: 10px;
     gap: 30px;
     transition: opacity 0.3s ease-in-out;
+}
+
+.subMenu.visible {
+    display: grid; 
+    opacity: 1;
+}
+
+.subMenu.hidden {
+    opacity: 0;
+    display: none;
 }
 
 .subMenu a {
@@ -107,11 +113,6 @@ nav {
     border-radius: 10px;
 }
 
-.navButton:hover + .subMenu,
-.subMenu:hover {
-    display: grid;
-    opacity: 1;
-}
 
 .contactsMenu {
     position: absolute;
@@ -271,13 +272,13 @@ nav {
     opacity: 0.5;
 }
 
-
 /* main */
 
 main {
     display: flex;
     flex-direction: column;
     gap: 12rem;
+    margin-bottom: 10rem;
 }
 
 /* article */
@@ -702,12 +703,20 @@ article img {
 
 .menuConfigurator {
     display: flex;
+    gap: 5rem;
+    position: relative;
 }
 
 .preView {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
     background-color: #493628;
     border-radius: 20px;
     padding: 5rem;
+    max-width: 60rem;
+    width: 100%;
 }
 
 .preView p {
@@ -720,16 +729,25 @@ article img {
 }
 
 .preView img {
-    transform: scale(0.5);
+    width: 80%; 
+    height: auto;
 }
 
 .configuratorChoice {
     display: flex;
     flex-direction: column;
-    gap: 10rem;
+    gap: 2rem;
+    max-width: 25rem;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    right: 9rem;
 }
 
 .configuratorChoice details {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
     font-family: var(--font-family);
     font-size: 1.5rem;
     font-weight: var(--font-weight-regular);
@@ -739,14 +757,84 @@ article img {
     list-style: none;
 }
 
+.configuratorChoice fieldset {
+    border: none;
+}
+
+.configuratorChoice legend {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
 .color {
     display: flex;
+    gap: 1rem;
 }
 
 .color button {
     width: 60px;
     height: 60px;
-    background-color: white;
+    cursor: pointer;
+    border: 1px solid;
+    transition: all 0.3s ease;
+}
+
+.color button:hover {
+    transform: scale(1.1);
+}
+
+.color button[data-color="white"] {
+    background-color: #FFFFFF;
+}
+
+.color button[data-color="black"] {
+    background-color: #000000;
+}
+
+.color button[data-color="green"] {
+    background-color: #135300;
+}
+
+.color button[data-color="brown"] {
+    background-color: #7E634F;
+}
+
+.color button[data-color="red"] {
+    background-color: #930000;
+}
+
+.color button[data-color="pink"] {
+    background-color: #990033;
+}
+
+.color button[data-color="purple"] {
+    background-color: #94849C;
+}
+
+.color button[data-color="blue"] {
+    background-color: #345E88;
+}
+
+.color button[data-color="dark-blue"] {
+    background-color: #01194B;
+}
+
+.color button[data-color="gray"] {
+    background-color: #9F9F9F;
+}
+
+.configuratorChoice .continueButton {
+    background-color: #7E634F;
+    border-radius: 20px;
+    padding: 1rem;
+    cursor: pointer;
+    border: none;
+    width: 80%;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: var(--font-weight-regular);
+    color: #FFFFFF;
 }
 
 /* footer */

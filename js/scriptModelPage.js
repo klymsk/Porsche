@@ -60,6 +60,9 @@ if (selectedModel) {
     <li><span>${selectedModel.range}</span><br>Запас ходу</li>
     <li><span>${selectedModel.acceleration}</span><br>Прискорення</li>
   `;
+
+  document.getElementById('configuratorName').textContent = selectedModel.name;
+  document.getElementById('configuratorImg').src = selectedModel.pageImage;
 } else {
   alert('Дані моделі не знайдено!');
 }

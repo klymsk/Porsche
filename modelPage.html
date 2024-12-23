@@ -55,7 +55,7 @@
                             </a>
                         </li>
                     </ul>
-                <li><a href="#" class="navButton" id = "buttonContacts">Контакти</a></li>
+                <li><a href="contactsPage.html" class="navButton" id = "buttonContacts">Контакти</a></li>
                     <ul class = "contactsMenu">
                         <li>
                             <h2>Наші контакти</h2>
@@ -81,7 +81,7 @@
                             </address>
                         </li>
 
-                        <img src = "img/FooterImg.png">
+                        <img src = "img/General/FooterImg.png" alt = "porscheImg">
                     </ul>
                 <li><a href="#" class="navButton" id = "buttonServices">Сервіси</a></li>
                     <ul class = "servicesMenu">
@@ -89,10 +89,10 @@
                             <a href = "#">Сервісне обслуговування</a>
                         </li>
                         <li>
-                            <a href = "#">Test-Drive в автосалонах Porsche</a>
+                            <a href = "#testDrive">Test-Drive в автосалонах Porsche</a>
                         </li>
                         <li>
-                            <a href = "#">Пропозиції з сервісу</a>
+                            <a href = "#sales">Пропозиції з сервісу</a>
                         </li>
                         <li>
                             <a href = "#">Trade-In</a>
@@ -115,16 +115,13 @@
 
     <main>
         <article>
-            <!-- Назва та ціна моделі -->
             <div class="modelCar">
-                <h1 id="modelName">Taycan</h1> <!-- Тут буде динамічно вставлятися назва моделі -->
-                <h2 id="modelPrice"><span>від</span> 100 000$</h2> <!-- Тут буде динамічно вставлятися ціна моделі -->
+                <h1 id="modelName">Taycan</h1> 
+                <h2 id="modelPrice"><span>від</span> 100 000$</h2> 
             </div>
         
-            <!-- Зображення моделі -->
-            <img id="modelImage" src="img/Porsche Taycan/TaycanModelPage.png" alt="Taycan"> <!-- Тут буде динамічно вставлятися зображення моделі -->
+            <img id="modelImage" src="img/Porsche Taycan/TaycanModelPage.png" alt="Taycan"> 
         
-            <!-- Детальні характеристики моделі -->
             <div class="detailInfo">
                 <ul id="modelDetails">
                     <!-- Тут будуть динамічно вставлятися характеристики -->
@@ -137,13 +134,12 @@
                 </ul>
             </div>
         
-            <!-- Кнопки для додаткових функцій -->
             <div class="buttons">
                 <ul>
-                    <li><a href="#testDrive">Тест-Драйв</a></li>
-                    <li><a href="#">Тех. харак.</a></li>
-                    <li><a href="#">Конфігуратор</a></li>
-                    <li><a href="#">Пропозиції</a></li>
+                    <li><a href = "#testDrive">Тест-Драйв</a></li>
+                    <li><a href = "#techInfo">Тех. харак.</a></li>
+                    <li><a href = "#configurator">Конфігуратор</a></li>
+                    <li><a href = "#sales">Пропозиції</a></li>
                 </ul>
             </div>
         </article>
@@ -214,7 +210,7 @@
             </div>
         </section>
 
-        <section class = "techInfo">
+        <section class = "techInfo" id = "techInfo">
             <h3>Технічні Характеристики</h3>
 
             <div class = "techChoice">
@@ -249,7 +245,7 @@
             </div>
         </section>
 
-        <section class = "sales">
+        <section class = "sales" id = "sales">
             <h3>Пропозиції</h3>
 
             <div class = "optionSales">
@@ -277,7 +273,7 @@
             </div>
         </section>
 
-        <section class = "configurator">
+        <section class = "configurator" id = "configurator">
             <div class = "headerSection">
                 <h2>Як щодо унікального Porsche?</h2>
                 <h3>Конфігуратор</h3>
@@ -286,8 +282,8 @@
 
             <div class = "menuConfigurator">
                 <div class = "preView">
-                    <p>Taycan</p>
-                    <img src = "img/Porsche Taycan/TaycanModelPage.png" alt = "Porsche">
+                    <p id = "configuratorName">Taycan</p>
+                    <img src = "img/Porsche Taycan/TaycanModelPage.png" alt = "Porsche" id = "configuratorImg">
                 </div>
 
                 <div class = "configuratorChoice">
@@ -352,7 +348,7 @@
             <a href = "#" class = "footerButton">Контакти</a>
         </section>
 
-        <img src = "img/General/FotterImg2.png" alt = "footerImg" class = "footerImg">
+        <img src = "img/General/FooterImg3.png" alt = "footerImg" class = "footerImg">
 
         <section class = "menuButtons">
             <a href = "#" class = "footerButton">м. Київ</a>

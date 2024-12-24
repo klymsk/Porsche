@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
-    <link rel = "stylesheet" href = "css/stylesContactsPage.css">
+    <link rel = "stylesheet" href = "css/stylesTradeIn.css">
 </head>
 <body>
     <header>
@@ -95,7 +95,7 @@
                             <a href = "modelPage.html#sales">Пропозиції з сервісу</a>
                         </li>
                         <li>
-                            <a href = "#">Trade-In</a>
+                            <a href = "tradeInPage.html">Trade-In</a>
                         </li>
                     </ul>
                 <li><a href="#" class="navButton" id = "buttonAccessories">Аксесуари</a></li>
@@ -116,17 +116,101 @@
     <main>
         <article>
             <section class = "stepBlock">
-                <h1>Крок1</h1>
+                <h1>Крок 1</h1>
 
                 <div class = "choiceCar">
+                    <h2>Оберіть авто, що Ви пропонуєте<br>з доступного переліку:</h2>
+                    <img src = "img/General/informationLogo.png" alt = "informationLogo">
 
+                    <select>
+                        <option value = "Taycan">Porsche Taycan</option>
+                        <option value = "Panamera">Porsche Panamera</option>
+                        <option value = "Porsche 911">Porsche 911</option>
+                        <option value = "Cayenne">Porsche Cayenne</option>
+                        <option value = "Macan">Porsche Macan</option>
+                    </select>
                 </div>
 
                 <div class = "price">
-                    
+                    <h2>Приблизна ціна моделі:<br><span id = "priceValue">~ 80 000$</span></h2>
+                    <p>*Фінальна ціна моделі буде<br>точно озвучена після оцінки</p>
                 </div>
+
+                <img src = "img/General/porscheTradeIn.png" alt = "porscheImg">
+            </section>
+
+            <section class = "stepBlock">
+                <h1>Крок 2</h1>
+
+                <div class = "choiceCar">
+                    <h2>Оберіть бажане авто для Trade-In<br>з доступного переліку:</h2>
+
+                    <select>
+                        <option value = "Taycan">Porsche Taycan</option>
+                        <option value = "Panamera">Porsche Panamera</option>
+                        <option value = "Porsche 911">Porsche 911</option>
+                        <option value = "Cayenne">Porsche Cayenne</option>
+                        <option value = "Macan">Porsche Macan</option>
+                    </select>
+                </div>
+
+                <div class = "price">
+                    <h2>Приблизна доплата при Trade-In:<br><span id = "priceValue">~ 80 000$</span></h2>
+                    <p>*Фінальна ціна моделі буде<br>точно озвучена після оцінки</p>
+                </div>
+
+                <img src = "img/General/porscheTradeIn2.png" alt = "porscheImg">
+            </section>
+
+            <section class = "stepBlock">
+                <h1>Крок 3</h1>
+
+                <div class = "choiceCar">
+                    <p>Для фінальної оцінки Вашого авто<br>потрібно зв‘язатися з менеджером</p>
+                    <h2>Заповніть заявку нижче</h2>
+
+                    <ul>
+                        <li>
+                            <label>ім‘я</label>
+                            <input type = "text">
+                        </li>
+
+                        <li>
+                            <label>бажана дата</label>
+                            <input type = "date">
+                        </li>
+
+                        <li>
+                            <label>бажаний автосалон</label>
+                            <select>
+                                <option value = "Kyiv">Київ</option>
+                                <option value = "Lviv">Львів</option>
+                                <option value = "Odesa">Одеса</option>
+                                <option value = "Kharkiv">Харків</option>
+                            </select>
+                        </li>
+
+                        <li>
+                            <label>бажаний час</label>
+                            <input type = "time">
+                        </li>
+                    </ul>
+                </div>
+
+                <button type = "submit">Зберегти</button>
+
+                <img src = "img/General/porscheTradeIn3.png" alt = "porscheImg">
             </section>
         </article>
+
+        <section class = "generalInfo">
+            <img src = "img/General/tradeInText.png" alt = "porscheImg">
+
+            <div class = "text">
+                <h2>Trade-In</h2>
+                <p>Програма Trade-In від Porsche — це зручний спосіб оновити ваш автомобіль без зайвих турбот. Обміняйте свій старий автомобіль на нову модель Porsche і отримайте вигідну пропозицію з оцінкою вашого транспортного засобу. Наші експерти забезпечать чесну та прозору оцінку, щоб ви могли безперешкодно перейти до своєї нової Porsche, насолоджуючись кожним моментом за кермом.</p>
+            </div>
+        </section>
     </main>
 
     <footer>

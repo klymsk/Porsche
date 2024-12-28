@@ -719,7 +719,7 @@ article img {
     background-color: #493628;
     border-radius: 20px;
     padding: 5rem;
-    max-width: 60rem;
+    max-width: 60%;
     width: 100%;
 }
 
@@ -744,8 +744,8 @@ article img {
     max-width: 25rem;
     width: 100%;
     position: absolute;
-    top: 0px;
-    right: 9rem;
+    top: 3rem;
+    right: 0rem;
 }
 
 .configuratorChoice details {

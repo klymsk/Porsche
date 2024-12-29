@@ -371,6 +371,14 @@ article {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    transform: translateY(2rem);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.text.visible {
+    transform: translateY(0rem);
+    opacity: 1;
 }
 
 .text p:first-of-type {
@@ -395,6 +403,18 @@ article {
     display: flex;
     gap: 2.5rem;
     align-items: center;
+    transform: translateY(2rem);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.preFooter.visible {
+    opacity: 1;
+    transform: translateY(0rem);
+}
+
+.preFooter img {
+    width: 60%;
 }
 
 .question {
@@ -402,6 +422,14 @@ article {
     flex-direction: column;
     gap: 1.5rem;
     width: 37rem;
+    transform: translateY(2rem);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.question.visible {
+    opacity: 1;
+    transform: translateY(0rem);
 }
 
 .question h2 {
@@ -415,6 +443,7 @@ article {
     font-family: var(--font-family);
     font-size: 0.8rem;
     font-weight: var(--font-weight-regular);
+    width: 80%;
     color: #292929;
 }
 
@@ -434,6 +463,14 @@ footer img {
     height: auto; 
     max-width: 50%; 
     display: block;
+    opacity: 0;
+    transform: translateX(50rem);
+    transition: all 0.8s ease;
+}
+
+footer img.visible {
+    opacity: 1;
+    transform: translateX(0rem);
 }
 
 .menuButtons {
@@ -448,5 +485,10 @@ footer img {
     font-size: 1rem;
     font-weight: var(--font-weight-bold);
     color: #FBF8EF;
-    transition: all 0.3 ease;
+    transition: all 0.3s ease-in-out;
+}
+
+.menuButtons:nth-of-type(1) .footerButton:hover {
+    transform: scale(1.05);
+    color: #FFF3D0;
 }

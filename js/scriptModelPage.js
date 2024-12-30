@@ -39,7 +39,6 @@ AddRemMenu(buttonServices, servicesMenu);
 AddRemMenu(buttonAccessories, accessoriesMenu);
 
 
-
 carChoiceItems.forEach(item => {
     item.addEventListener('click', function() {
         item.classList.toggle('active');
@@ -66,6 +65,28 @@ if (selectedModel) {
 } else {
   alert('Дані моделі не знайдено!');
 }
+
+const observe = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+        }
+    });
+}, {threshold: 0.3});
+
+function isVisible(className) {
+    document.querySelectorAll(`${className}`).forEach(block => {
+        observe.observe(block);
+    });
+}
+  
+
+isVisible(".footerImg");
+isVisible(".generalInfo img");
+isVisible(".text");
+isVisible(".techInfo .techChoice img");
+isVisible(".techChoice ul");
 
 
 

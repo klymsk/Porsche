@@ -150,7 +150,7 @@ function isVisible(className) {
 isVisible(".preFooter");
 isVisible(".question");
 isVisible(".text");
-isVisible(".footerImg")
+isVisible(".footerImg");
 
 AddRemMenu(buttonModel, subMenu);
 AddRemMenu(buttonContacts, contactsMenu);

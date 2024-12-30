@@ -37,3 +37,25 @@ AddRemMenu(buttonModel, subMenu);
 AddRemMenu(buttonContacts, contactsMenu);
 AddRemMenu(buttonServices, servicesMenu);
 AddRemMenu(buttonAccessories, accessoriesMenu);
+
+
+const observe = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+        }
+    });
+}, {threshold: 0.3});
+
+function isVisible(className) {
+    document.querySelectorAll(`${className}`).forEach(block => {
+        observe.observe(block);
+    });
+  }
+
+isVisible(".generalBlock img");
+isVisible(".generalInfo img");
+isVisible(".generalInfo .text");
+isVisible(".footerImg");
+isVisible(".stepBlock");

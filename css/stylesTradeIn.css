@@ -314,6 +314,14 @@ article {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     position: relative;
+    transform: translateX(15rem);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.stepBlock.visible {
+    opacity: 1;
+    transform: translateX(0rem);
 }
 
 .stepBlock h1 {
@@ -460,6 +468,14 @@ article {
 
 .generalInfo img {
     width: 60%;
+    transform: translateY(2rem);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.generalInfo img.visible {
+    transform: translateY(0rem);
+    opacity: 1;
 }
 
 .generalInfo .text {
@@ -469,6 +485,14 @@ article {
     font-size: 1rem;
     font-weight: var(--font-weight-bold);
     color: #4F4F4F;
+    transform: translateY(2rem);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.generalInfo .text.visible {
+    transform: translateY(0rem);
+    opacity: 1;
 }
 
 .generalInfo .text p {
@@ -492,6 +516,14 @@ footer img {
     height: auto; 
     max-width: 50%; 
     display: block;
+    opacity: 0;
+    transform: translateX(50rem);
+    transition: all 0.8s ease;
+}
+
+footer img.visible {
+    opacity: 1;
+    transform: translateX(0rem);
 }
 
 .menuButtons {
@@ -506,5 +538,10 @@ footer img {
     font-size: 1rem;
     font-weight: var(--font-weight-bold);
     color: #FBF8EF;
-    transition: all 0.3 ease;
+    transition: all 0.3s ease-in-out;
+}
+
+.menuButtons:nth-of-type(1) .footerButton:hover {
+    transform: scale(1.05);
+    color: #FFF3D0;
 }

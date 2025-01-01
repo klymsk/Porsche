@@ -442,6 +442,7 @@ footer {
     align-items: center;
     background-color: #292929;
     padding: 7.5rem 7.5rem;
+    overflow: hidden;
 }
 
 footer img {

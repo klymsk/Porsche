@@ -393,7 +393,6 @@ article {
 
 .cars img {
     box-shadow: 2px 0px 15px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
     transition: all 0.3s ease;
 }
 
@@ -407,6 +406,11 @@ article {
     display: flex;
     flex-direction: row;
     gap: 2.5rem;
+}
+
+.carToLeft img {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .infoPrice {
@@ -481,6 +485,11 @@ article {
     flex-direction: row;
     justify-content: flex-end;
     gap: 2.5rem;
+}
+
+.carToRight img {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 .carToRight .infoButton,

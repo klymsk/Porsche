@@ -455,5 +455,10 @@ footer img {
     font-size: 1rem;
     font-weight: var(--font-weight-bold);
     color: #FBF8EF;
-    transition: all 0.3 ease;
+    transition: all 0.3s ease-in-out;
+}
+
+.menuButtons:nth-of-type(1) .footerButton:hover {
+    transform: scale(1.05);
+    color: #FFF3D0;
 }

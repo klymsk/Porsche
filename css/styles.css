@@ -300,12 +300,14 @@ article {
     text-decoration: none;
 }
 
-.articleTxt h1, h2 {
+.articleTxt h1, 
+.articleTxt h2 {
     font-family: var(--font-family);
     font-size: 2.5rem;
     font-weight: var(--font-weight-bold);
-    color: #C7C7C7;
-    transition: all 0.5 ease;
+    color: #FFFFFF; 
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    transition: all 0.5s ease;
 }
 
 .articleTxt h2 {
@@ -313,13 +315,12 @@ article {
     font-weight: var(--font-weight-regular);
 }
 
-.articleTxt h1:hover {
+.articleTxt h1:hover,
+.articleTxt h2:hover {
+    font-weight: 900;
     color: #FFF985;
 }
 
-.articleTxt h2:hover {
-    color: #FFF985;
-}
 
 .mainPhoto {
     width: 100%;        
@@ -365,6 +366,14 @@ article {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    transform: translateY(5rem);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.text.visible {
+    opacity: 1;
+    transform: translateY(0rem);
 }
 
 .text p:first-of-type {

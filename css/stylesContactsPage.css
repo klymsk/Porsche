@@ -354,6 +354,7 @@ article {
 .generalBlock label {
     font-size: 1rem;
     font-weight: 300;
+    opacity: 0.7;
 }
 
 .generalBlock ul select {

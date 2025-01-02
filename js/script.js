@@ -52,6 +52,7 @@ function isVisible(className) {
   }
 
 isVisible("footer img");
+isVisible(".text");
 
 function ImageSwipe() {
     const articleImg = document.querySelector(".mainPhoto"); 

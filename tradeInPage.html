@@ -122,7 +122,7 @@
                     <h2>Оберіть авто, що Ви пропонуєте<br>з доступного переліку:</h2>
                     <img src = "img/General/informationLogo.png" alt = "informationLogo">
 
-                    <select>
+                    <select id = "selectedCar">
                         <option value = "Taycan">Porsche Taycan</option>
                         <option value = "Panamera">Porsche Panamera</option>
                         <option value = "Porsche 911">Porsche 911</option>
@@ -132,11 +132,11 @@
                 </div>
 
                 <div class = "price">
-                    <h2>Приблизна ціна моделі:<br><span id = "priceValue">~ 80 000$</span></h2>
+                    <h2>Приблизна ціна моделі:<br>~<span id = "priceValue">80 000</span>$</h2>
                     <p>*Фінальна ціна моделі буде<br>точно озвучена після оцінки</p>
                 </div>
 
-                <img src = "img/General/porscheTradeIn.png" alt = "porscheImg">
+                <img src = "img/General/porscheTradeIn.png" alt = "porscheImg" id = "carModelImg">
             </section>
 
             <section class = "stepBlock">
@@ -145,7 +145,7 @@
                 <div class = "choiceCar">
                     <h2>Оберіть бажане авто для Trade-In<br>з доступного переліку:</h2>
 
-                    <select>
+                    <select id = "selectedCar">
                         <option value = "Taycan">Porsche Taycan</option>
                         <option value = "Panamera">Porsche Panamera</option>
                         <option value = "Porsche 911">Porsche 911</option>
@@ -159,7 +159,7 @@
                     <p>*Фінальна ціна моделі буде<br>точно озвучена після оцінки</p>
                 </div>
 
-                <img src = "img/General/porscheTradeIn2.png" alt = "porscheImg">
+                <img src = "img/General/porscheTradeIn2.png" alt = "porscheImg" id = "carModelImg">
             </section>
 
             <section class = "stepBlock">
@@ -232,6 +232,6 @@
         </section>
     </footer>
 
-    <script src = "js/scriptContacts.js"></script>
+    <script src = "js/scriptTradeIn.js"></script>
 </body>
 </html>

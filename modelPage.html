@@ -172,7 +172,7 @@
                     <ul class = "generalList">
                         <li>
                             1. Оберіть бажаний автомобіль.
-                            <ul class = "carChoice">
+                            <ul class = "carChoice" id = "carChoice">
                                 <li>
                                     <label>Porsche Taycan</label>
                                     <img src = "img/List/listTaycan.png">
@@ -198,16 +198,23 @@
 
                         <li>
                             2. Оберіть дату.
-                            <input type = "date">
+                            <input type = "date" id = "dateInput">
                         </li>
 
                         <li>
                             3. Введіть контактні дані.
-                            <input type = "email">
+                            <input type = "email" id = "emailInput">
                         </li>
                     </ul>
 
-                    <button type = "submit">Зберегти</button>
+                    <button type = "submit" id = "buttonSave">Зберегти</button>
+                </div>
+
+                <div class = "submitButton" id = "submitScreen">
+                    <div class = "content">
+                        <p>Успішно збережено!</p>
+                        <button id="buttonOK">ok</button>
+                    </div>
                 </div>
             </div>
         </section>

@@ -90,6 +90,38 @@ isVisible(".techChoice ul");
 
 
 
+function submitScreenInOut() {
+    const buttonSave = document.getElementById("buttonSave");
+    const buttonOK = document.getElementById("buttonOK");
+    const submitScreen = document.getElementById("submitScreen");
+
+    const carChoice = document.querySelector('input[name="car"]:checked');
+    const date = document.getElementById("dateInput");
+    const email = document.getElementById("emailInput");
+
+    buttonSave.addEventListener('click', function() {
+
+        if (date.value !== "" && email.value !== "") {
+            submitScreen.style.display = 'flex';
+        }
+        else {
+            alert("Не всі дані заповнено");
+        }
+    });
+
+    buttonOK.addEventListener('click', function() {
+        submitScreen.style.display = 'none';
+
+        date.value = null;
+        email.value = null;
+    });
+};
+
+submitScreenInOut();
+
+
+
+
 
 
 

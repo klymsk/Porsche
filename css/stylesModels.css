@@ -336,6 +336,7 @@ article {
 }
 
 .carContainer:hover {
+    transform: scale(1.03);
     background-color: #F1F1F1;
 }
 
@@ -456,6 +457,7 @@ footer {
     align-items: center;
     background-color: #292929;
     padding: 7.5rem 7.5rem;
+    overflow: hidden;
 }
 
 footer img {

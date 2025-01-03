@@ -304,6 +304,12 @@ article {
     gap: 10rem;
 }
 
+article:nth-child(2) {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
 .generalBlock {
     display: flex;
     flex-direction: column;
@@ -322,7 +328,6 @@ article {
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     background-color: #493628;
-    direction: rtl;
     margin-left: auto;
 }
 
@@ -339,6 +344,11 @@ article {
     grid-template-columns: repeat(2, 1fr);
     gap: 4rem 0rem;
     width: 50%;
+}
+
+.generalBlock:nth-child(2) ul,
+.generalBlock:nth-child(2) h1 {
+    margin-left: auto;
 }
 
 .generalBlock li {
@@ -365,11 +375,15 @@ article {
     padding: 4px;
     border-radius: 20px;
     background-color: #FBF8EF;
-    width: 40%;
+    width: 60%;
 }
 
 .generalBlock .map iframe {
     border-radius: 20px;
+}
+
+.generalBlock:nth-child(2) .map {
+    margin-left: auto;
 }
 
 .generalBlock img {

@@ -390,6 +390,7 @@ article img {
     border-radius: 20px;
     padding: 3.5rem 4.5rem;
     max-width: 100%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     opacity: 0;
     transform: translateY(5rem);
     transition: all 0.3s ease;
@@ -434,6 +435,7 @@ footer {
     align-items: center;
     background-color: #292929;
     padding: 7.5rem 7.5rem;
+    overflow: hidden;
 }
 
 footer img {

@@ -88,5 +88,75 @@ function changeCarInfo() {
 }
 
 document.getElementById("selectedCar").addEventListener('change', changeCarInfo);
-
 changeCarInfo();
+
+function calculateTradeIn() {
+    const carModelImg = document.getElementById("carModelImgStep2");
+    const selectedCar = document.getElementById("selectedCarStep2");
+    const price = document.getElementById("priceValueStep2");
+
+    if (selectedCar.value === "Porsche 911") {
+        carModelImg.src = "img/General/porscheTradeIn3.png";
+        price.textContent = "100 000";
+    }
+    else if (selectedCar.value === "Panamera") {
+        carModelImg.src = "img/General/porscheTradeInPanamera.png";
+        price.textContent = "40 000";
+    }
+    else if (selectedCar.value === "Taycan") {
+        carModelImg.src = "img/General/porscheTradeIn.png";
+        price.textContent = "50 000";
+    }
+    else if (selectedCar.value === "Cayenne") {
+        carModelImg.src = "img/General/porscheTradeInCayenne.png";
+        price.textContent = "40 000";
+    }
+    else if (selectedCar.value === "Macan") {
+        carModelImg.src = "img/General/porscheTradeInMacan.png";
+        price.textContent = "30 000";
+    }
+}
+
+document.getElementById("selectedCarStep2").addEventListener('change', calculateTradeIn);
+calculateTradeIn();
+
+
+function submitScreenInOut() {
+    const buttonSave = document.getElementById("saveButton");
+    const buttonOK = document.getElementById("buttonOK");
+    const successScreen = document.getElementById("successScreen");
+    const messageInfo = document.getElementById("messageInfo");
+    const infoLogo = document.getElementById("informationLogo");
+
+    const nameInput = document.getElementById("nameInput");
+    const dateInput = document.getElementById("dateInput");
+    const timeInput = document.getElementById("timeInput");
+
+    buttonSave.addEventListener('click', function() {
+        if (nameInput.value !== "" && dateInput.value !== "" && timeInput.value !== "") {
+            successScreen.style.display = 'flex';
+        }
+        else {
+            alert("Не всі дані заповнено");
+        }
+    });
+
+    buttonOK.addEventListener('click', function() {
+        successScreen.style.display = 'none';
+
+        nameInput.value = null;
+        dateInput.value = null;
+        timeInput.value = null;
+    });
+
+    infoLogo.addEventListener('click', function() {
+        if (messageInfo.style.display === 'flex') {
+            messageInfo.style.display = 'none';
+        }
+        else {
+            messageInfo.style.display = 'flex';
+        }
+    });
+};
+
+submitScreenInOut();

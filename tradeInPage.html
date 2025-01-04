@@ -120,7 +120,11 @@
 
                 <div class = "choiceCar">
                     <h2>Оберіть авто, що Ви пропонуєте<br>з доступного переліку:</h2>
-                    <img src = "img/General/informationLogo.png" alt = "informationLogo">
+                    <img src = "img/General/informationLogo.png" alt = "informationLogo" id="informationLogo">
+
+                    <div class = "messageInfo" id = "messageInfo">
+                        <p>На даний момент, для послуги Trade-In<br>доступні лише моделі Porsche</p>
+                    </div>
 
                     <select id = "selectedCar">
                         <option value = "Taycan">Porsche Taycan</option>
@@ -132,7 +136,7 @@
                 </div>
 
                 <div class = "price">
-                    <h2>Приблизна ціна моделі:<br>~<span id = "priceValue">80 000</span>$</h2>
+                    <h2>Приблизна ціна моделі:<br>~ <span id = "priceValue">80 000</span>$</h2>
                     <p>*Фінальна ціна моделі буде<br>точно озвучена після оцінки</p>
                 </div>
 
@@ -145,7 +149,7 @@
                 <div class = "choiceCar">
                     <h2>Оберіть бажане авто для Trade-In<br>з доступного переліку:</h2>
 
-                    <select id = "selectedCar">
+                    <select id = "selectedCarStep2">
                         <option value = "Taycan">Porsche Taycan</option>
                         <option value = "Panamera">Porsche Panamera</option>
                         <option value = "Porsche 911">Porsche 911</option>
@@ -155,11 +159,11 @@
                 </div>
 
                 <div class = "price">
-                    <h2>Приблизна доплата при Trade-In:<br><span id = "priceValue">~ 80 000$</span></h2>
+                    <h2>Приблизна доплата при Trade-In:<br>~ <span id = "priceValueStep2">80 000</span>$</h2>
                     <p>*Фінальна ціна моделі буде<br>точно озвучена після оцінки</p>
                 </div>
 
-                <img src = "img/General/porscheTradeIn2.png" alt = "porscheImg" id = "carModelImg">
+                <img src = "img/General/porscheTradeIn2.png" alt = "porscheImg" id = "carModelImgStep2">
             </section>
 
             <section class = "stepBlock">
@@ -172,12 +176,12 @@
                     <ul>
                         <li>
                             <label>ім‘я</label>
-                            <input type = "text">
+                            <input type = "text" id = "nameInput">
                         </li>
 
                         <li>
                             <label>бажана дата</label>
-                            <input type = "date">
+                            <input type = "date" id = "dateInput">
                         </li>
 
                         <li>
@@ -192,15 +196,20 @@
 
                         <li>
                             <label>бажаний час</label>
-                            <input type = "time">
+                            <input type = "time" id = "timeInput">
                         </li>
                     </ul>
                 </div>
 
-                <button type = "submit">Зберегти</button>
+                <button type = "submit" id = "saveButton">Зберегти</button>
 
                 <img src = "img/General/porscheTradeIn3.png" alt = "porscheImg">
             </section>
+
+            <div class = "successScreen" id = "successScreen">
+                <p>Дані успішно збережено!</p>
+                <button id = "buttonOK">ok</button>
+            </div>
         </article>
 
         <section class = "generalInfo">

@@ -177,3 +177,169 @@ AddRemMenu(buttonAccessories, accessoriesMenu);
       console.error('Модель не знайдена!');
     }
   }
+
+window.onload = function() {
+  const urlCheck = new URLSearchParams(window.location.search);
+  const model = urlCheck.get("model");
+
+  if (model) {
+    loadModelInfo(model);
+  }
+  else {
+    alert("Моделі не знайдено");
+  }
+};
+
+function loadModelInfo(model) {
+  const modelArticle = document.getElementById("article");
+  modelArticle.innerHTML = '';
+
+
+}
+
+window.onload = function() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const category = urlParams.get('category'); 
+
+  if (category) {
+      loadModelsByCategory(category); 
+  } else {
+      document.getElementById('carContainer').innerHTML = '<p>Категорія не знайдена!</p>';
+  }
+};
+
+function loadModelsByCategory(category) {
+  const container = document.getElementById('carContainer');
+  container.innerHTML = ''; 
+  switch (category) {
+      case 'taycan':
+          loadTaycanModels(container);
+          break;
+
+      case 'cayenne':
+          loadCayenneModels(container);
+          break;
+
+      case '911':
+          load911Models(container);
+          break;
+
+      case 'macan':
+          loadMacanModels(container);
+          break;
+
+      case 'panamera':
+          loadPanameraModels(container);
+          break;
+
+      default:
+          container.innerHTML = '<p>Моделі для цієї категорії не знайдено!</p>';
+          break;
+  }
+}
+
+function loadTaycanModels(container) {
+  container.innerHTML = `
+      <h1>Porsche Taycan</h1>
+
+      <a href="modelPage.html?model=Taycan" class="carLink">
+          <div class="carContainer">
+              <img src="img/Porsche Taycan/TaycanModel.png" alt="Taycan">
+              <h2>Taycan</h2>
+              <div class="addInfo">
+                  <p>Потужність (к/с): 408</p>
+                  <p>Макс. швид.: 230 км/год</p>
+                  <p>Прискорення: 4,7 с</p>
+                  <p>Запас ходу: ~450 км</p>
+              </div>
+              <h3>від 100 000$</h3>
+          </div>
+      </a>
+
+      <a href="modelPage.html?model=Taycan4S" class="carLink">
+          <div class="carContainer">
+              <img src="img/Porsche Taycan/Taycan4SModel.png" alt="Taycan 4S">
+              <h2>Taycan 4S</h2>
+              <div class="addInfo">
+                  <p>Потужність (к/с): 462</p>
+                  <p>Макс. швид.: 250 км/год</p>
+                  <p>Прискорення: 3,7 с</p>
+                  <p>Запас ходу: ~520 км</p>
+              </div>
+              <h3>від 130 000$</h3>
+          </div>
+      </a>
+
+      <a href="modelPage.html?model=TaycanTurboGT" class="carLink">
+          <div class="carContainer">
+              <img src="img/Porsche Taycan/TaycanTurboGtModel.png" alt="Taycan Turbo GT">
+              <h2>Taycan Turbo GT</h2>
+              <div class="addInfo">
+                  <p>Потужність (к/с): 789</p>
+                  <p>Макс. швид.: 305 км/год</p>
+                  <p>Прискорення: 2,2 с</p>
+                  <p>Запас ходу: ~530 км</p>
+              </div>
+              <h3>від 230 000$</h3>
+          </div>
+      </a>
+  `;
+}
+
+function loadCayenneModels(container) {
+  container.innerHTML = `
+      <h1>Porsche Cayenne</h1>
+
+      <a href="modelPage.html?model=Cayenne" class="carLink">
+          <div class="carContainer">
+              <img src="img/Porsche Cayenne/CayenneModel.png" alt="Cayenne">
+              <h2>Cayenne</h2>
+              <div class="addInfo">
+                  <p>Потужність (к/с): 550</p>
+                  <p>Макс. швид.: 265 км/год</p>
+                  <p>Прискорення: 5,3 с</p>
+                  <p>Запас ходу: ~600 км</p>
+              </div>
+              <h3>від 90 000$</h3>
+          </div>
+      </a>
+
+      <a href="modelPage.html?model=CayenneTurbo" class="carLink">
+          <div class="carContainer">
+              <img src="img/Porsche Cayenne/CayenneTurboModel.png" alt="Cayenne Turbo">
+              <h2>Cayenne Turbo</h2>
+              <div class="addInfo">
+                  <p>Потужність (к/с): 550</p>
+                  <p>Макс. швид.: 270 км/год</p>
+                  <p>Прискорення: 5,1 с</p>
+                  <p>Запас ходу: ~650 км</p>
+              </div>
+              <h3>від 120 000$</h3>
+          </div>
+      </a>
+  `;
+}
+
+function load911Models(container) {
+  container.innerHTML = `
+      <h1>Porsche 911</h1>
+
+      <a href="modelPage.html?model=911Carrera" class="carLink">
+          <div class="carContainer">
+              <img src="img/Porsche 911/911Carrera.png" alt="911 Carrera">
+              <h2>911 Carrera</h2>
+              <div class="addInfo">
+                  <p>Потужність (к/с): 450</p>
+                  <p>Макс. швид.: 300 км/год</p>
+                  <p>Прискорення: 3,2 с</p>
+                  <p>Запас ходу: ~500 км</p>
+              </div>
+              <h3>від 110 000$</h3>
+          </div>
+      </a>
+
+      <!-- інші моделі 911 -->
+  `;
+}
+
+

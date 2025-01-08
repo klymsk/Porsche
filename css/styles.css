@@ -7,7 +7,7 @@
 body {
     display: flex;
     flex-direction: column;
-    gap: 6rem;
+    gap: 5rem;
     background-color: #FBF8EF;
 }
 
@@ -271,6 +271,32 @@ nav {
     opacity: 0.5;
 }
 
+.logIn {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    justify-content: center;
+    align-items: center;
+    font-style: none;
+    transform: scale(0.9);
+    text-decoration: none;
+    position: absolute;
+    right: 10px;
+}
+
+.logIn img {
+    opacity: 0.3;
+}
+
+.logIn p {
+    font-family: var(--font-family);
+    font-size: 0.7rem;
+    font-weight: 300;
+    color: var(--font-color);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+}
 
 /* main */
 

@@ -193,130 +193,304 @@ window.onload = function() {
 function loadModelInfo(model) {
   const modelArticle = document.getElementById("article");
   modelArticle.innerHTML = '';
+  switch(model) {
+    case 'cayenne':
+      loadCayenneModels(modelArticle);
+      break;
 
-
-}
-
-window.onload = function() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const category = urlParams.get('category'); 
-
-  if (category) {
-      loadModelsByCategory(category); 
-  } else {
-      document.getElementById('carContainer').innerHTML = '<p>Категорія не знайдена!</p>';
+    case 'porsche911':
+      load911Models(container);
+      break;
+    case 'taycan':
+      loadTaycanModels(modelArticle);
+      break;
+    default:
+      container.innerHTML = '<p>Моделі для цієї категорії не знайдено!</p>';
+      break;
   }
-};
 
-function loadModelsByCategory(category) {
-  const container = document.getElementById('carContainer');
-  container.innerHTML = ''; 
-  switch (category) {
-      case 'taycan':
-          loadTaycanModels(container);
-          break;
-
-      case 'cayenne':
-          loadCayenneModels(container);
-          break;
-
-      case '911':
-          load911Models(container);
-          break;
-
-      case 'macan':
-          loadMacanModels(container);
-          break;
-
-      case 'panamera':
-          loadPanameraModels(container);
-          break;
-
-      default:
-          container.innerHTML = '<p>Моделі для цієї категорії не знайдено!</p>';
-          break;
-  }
 }
 
 function loadTaycanModels(container) {
   container.innerHTML = `
-      <h1>Porsche Taycan</h1>
-
-      <a href="modelPage.html?model=Taycan" class="carLink">
-          <div class="carContainer">
-              <img src="img/Porsche Taycan/TaycanModel.png" alt="Taycan">
-              <h2>Taycan</h2>
-              <div class="addInfo">
-                  <p>Потужність (к/с): 408</p>
-                  <p>Макс. швид.: 230 км/год</p>
-                  <p>Прискорення: 4,7 с</p>
-                  <p>Запас ходу: ~450 км</p>
-              </div>
-              <h3>від 100 000$</h3>
-          </div>
-      </a>
-
-      <a href="modelPage.html?model=Taycan4S" class="carLink">
-          <div class="carContainer">
-              <img src="img/Porsche Taycan/Taycan4SModel.png" alt="Taycan 4S">
-              <h2>Taycan 4S</h2>
-              <div class="addInfo">
-                  <p>Потужність (к/с): 462</p>
-                  <p>Макс. швид.: 250 км/год</p>
-                  <p>Прискорення: 3,7 с</p>
-                  <p>Запас ходу: ~520 км</p>
-              </div>
-              <h3>від 130 000$</h3>
-          </div>
-      </a>
-
-      <a href="modelPage.html?model=TaycanTurboGT" class="carLink">
-          <div class="carContainer">
-              <img src="img/Porsche Taycan/TaycanTurboGtModel.png" alt="Taycan Turbo GT">
-              <h2>Taycan Turbo GT</h2>
-              <div class="addInfo">
-                  <p>Потужність (к/с): 789</p>
-                  <p>Макс. швид.: 305 км/год</p>
-                  <p>Прискорення: 2,2 с</p>
-                  <p>Запас ходу: ~530 км</p>
-              </div>
-              <h3>від 230 000$</h3>
-          </div>
-      </a>
+     <section class = "typeContainer">
+                <h1>Taycan</h1>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('Taycan')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche Taycan/TaycanModel.png" alt = "Taycan">
+        
+                        <h2>Taycan</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 408</p>
+                            <p>Макс. швид.: 230 км/год</p>
+                            <p>Прискорення: 4,7 с</p>
+                            <p>Запас ходу: ~450 км</p>
+                        </div>
+                        
+                        <h3>від 100 000$</h3>
+                    </div>
+                </a>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('Taycan4S')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche Taycan/Taycan4SModel.png" alt = "Taycan">
+        
+                        <h2>Taycan 4S</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 462</p>
+                            <p>Макс. швид.: 250 км/год</p>
+                            <p>Прискорення: 3,7 с</p>
+                            <p>Запас ходу: ~520 км</p>
+                        </div>
+                        
+                        <h3>від 130 000$</h3>
+                    </div>
+                </a>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('TaycanTurboGT')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche Taycan/TaycanTurboGtModel.png" alt = "Taycan">
+        
+                        <h2>Taycan Turbo GT</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 789</p>
+                            <p>Макс. швид.: 305 км/год</p>
+                            <p>Прискорення: 2,2 с</p>
+                            <p>Запас ходу: ~530 км</p>
+                        </div>
+                        
+                        <h3>від 230 000$</h3>
+                    </div>
+                </a>
+            </section>
+    
+            <section class = "typeContainer">
+                <h1>Taycan Cross Turismo</h1>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('Taycan4SCrossTurismo')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche Taycan/Taycan4SCross.png" alt = "Taycan">
+        
+                        <h2>Taycan 4S Cross Turismo</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 435</p>
+                            <p>Макс. швид.: 220 км/год</p>
+                            <p>Прискорення: 4,7 с</p>
+                            <p>Запас ходу: ~530 км</p>
+                        </div>
+                        
+                        <h3>від 130 000$</h3>
+                    </div>
+                </a>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('TaycanTurboCrossTurismo')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche Taycan/TaycanTurboCrossTurismo.png" alt = "Taycan">
+        
+                        <h2>Taycan Turbo Cross Turismo</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 707</p>
+                            <p>Макс. швид.: 250 км/год</p>
+                            <p>Прискорення: 2,8 с</p>
+                            <p>Запас ходу: ~550 км</p>
+                        </div>
+                        
+                        <h3>від 190 000$</h3>
+                    </div>
+                </a>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('TaycanTurboSCrossTurismo')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche Taycan/TaycanTurboSCross.png" alt = "Taycan">
+        
+                        <h2>Taycan Turbo S Cross Turismo</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 775</p>
+                            <p>Макс. швид.: 250 км/год</p>
+                            <p>Прискорення: 2,5 с</p>
+                            <p>Запас ходу: ~570 км</p>
+                        </div>
+                        
+                        <h3>від 210 000$</h3>
+                    </div>
+                </a>
+            </section>
+    
+            <section class = "typeContainer">
+                <h1>Taycan Sport Turismo</h1>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('TaycanSportTurismo')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche Taycan/TaycanSportTurismo.png" alt = "Taycan">
+        
+                        <h2>Taycan Sport Turismo</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 408</p>
+                            <p>Макс. швид.: 230 км/год</p>
+                            <p>Прискорення: 4,8 с</p>
+                            <p>Запас ходу: ~600 км</p>
+                        </div>
+                        
+                        <h3>від 130 000$</h3>
+                    </div>
+                </a>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('Taycan4SSportTurismo')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche Taycan/Taycan4SSport.png" alt = "Taycan">
+        
+                        <h2>Taycan 4S Sport Turismo</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 462</p>
+                            <p>Макс. швид.: 250 км/год</p>
+                            <p>Прискорення: 3,7 с</p>
+                            <p>Запас ходу: ~550 км</p>
+                        </div>
+                        
+                        <h3>від 150 000$</h3>
+                    </div>
+                </a>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('TaycanTurboSSportTurismo')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche Taycan/TaycanTurboSSport.png" alt = "Taycan">
+        
+                        <h2>Taycan Turbo S Sport Turismo</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 775</p>
+                            <p>Макс. швид.: 260 км/год</p>
+                            <p>Прискорення: 2,4 с</p>
+                            <p>Запас ходу: ~580 км</p>
+                        </div>
+                        
+                        <h3>від 230 000$</h3>
+                    </div>
+                </a>
+            </section>
   `;
 }
 
 function loadCayenneModels(container) {
   container.innerHTML = `
-      <h1>Porsche Cayenne</h1>
-
-      <a href="modelPage.html?model=Cayenne" class="carLink">
-          <div class="carContainer">
-              <img src="img/Porsche Cayenne/CayenneModel.png" alt="Cayenne">
-              <h2>Cayenne</h2>
-              <div class="addInfo">
-                  <p>Потужність (к/с): 550</p>
-                  <p>Макс. швид.: 265 км/год</p>
-                  <p>Прискорення: 5,3 с</p>
-                  <p>Запас ходу: ~600 км</p>
-              </div>
-              <h3>від 90 000$</h3>
-          </div>
-      </a>
-
-      <a href="modelPage.html?model=CayenneTurbo" class="carLink">
-          <div class="carContainer">
-              <img src="img/Porsche Cayenne/CayenneTurboModel.png" alt="Cayenne Turbo">
-              <h2>Cayenne Turbo</h2>
-              <div class="addInfo">
-                  <p>Потужність (к/с): 550</p>
-                  <p>Макс. швид.: 270 км/год</p>
-                  <p>Прискорення: 5,1 с</p>
-                  <p>Запас ходу: ~650 км</p>
-              </div>
-              <h3>від 120 000$</h3>
-          </div>
-      </a>
+      <section class = "typeContainer">
+                <h1>Cayenne</h1>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('Cayenne')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche Cayenne/CayenneModel.png" alt = "Taycan">
+        
+                        <h2>Cayenne</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 353</p>
+                            <p>Макс. швид.: 248 км/год</p>
+                            <p>Прискорення: 6,9 с</p>
+                            <p>Запас ходу: ~450 км</p>
+                        </div>
+                        
+                        <h3>від 100 000$</h3>
+                    </div>
+                </a>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('Taycan4S')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche Cayenne/CayenneSModel.png" alt = "Taycan">
+        
+                        <h2>Taycan S</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 474</p>
+                            <p>Макс. швид.: 273 км/год</p>
+                            <p>Прискорення: 5 с</p>
+                            <p>Запас ходу: ~520 км</p>
+                        </div>
+                        
+                        <h3>від 140 000$</h3>
+                    </div>
+                </a>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('TaycanTurboGT')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche Cayenne/CayenneGTSModel.png" alt = "Taycan">
+        
+                        <h2>Cayenne GTS</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 500</p>
+                            <p>Макс. швид.: 275 км/год</p>
+                            <p>Прискорення: 4,4 с</p>
+                            <p>Запас ходу: ~530 км</p>
+                        </div>
+                        
+                        <h3>від 160 000$</h3>
+                    </div>
+                </a>
+            </section>
+    
+            <section class = "typeContainer">
+                <h1>Cayenne Coupe</h1>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('Taycan4SCrossTurismo')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche Cayenne/CayenneCoupeModel.png" alt = "Taycan">
+        
+                        <h2>Cayenne Coupe</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 353</p>
+                            <p>Макс. швид.: 248 км/год</p>
+                            <p>Прискорення: 5,7 с</p>
+                            <p>Запас ходу: ~530 км</p>
+                        </div>
+                        
+                        <h3>від 120 000$</h3>
+                    </div>
+                </a>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('TaycanTurboCrossTurismo')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche Cayenne/CayenneGTSCoupeModel.png" alt = "Taycan">
+        
+                        <h2>Cayenne GTS Coupe</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 500</p>
+                            <p>Макс. швид.: 275 км/год</p>
+                            <p>Прискорення: 4,4 с</p>
+                            <p>Запас ходу: ~550 км</p>
+                        </div>
+                        
+                        <h3>від 160 000$</h3>
+                    </div>
+                </a>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('TaycanTurboSCrossTurismo')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche Cayenne/CayenneTurboGTCoupeModel.png" alt = "Taycan">
+        
+                        <h2>CayenneTurboGTCoupeModel</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 659</p>
+                            <p>Макс. швид.: 305 км/год</p>
+                            <p>Прискорення: 3,3 с</p>
+                            <p>Запас ходу: ~570 км</p>
+                        </div>
+                        
+                        <h3>від 240 000$</h3>
+                    </div>
+                </a>
+            </section>
   `;
 }
 

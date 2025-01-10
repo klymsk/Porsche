@@ -10,8 +10,6 @@ const servicesMenu = document.querySelector(".servicesMenu");
 const buttonAccessories = document.querySelector("#buttonAccessories");
 const accessoriesMenu = document.querySelector(".accessoriesMenu");
 
-const carChoiceItems = document.querySelectorAll('.carChoice li');
-
 function AddRemMenu(button, menu) {
     button.addEventListener('mouseenter', () => {
         menu.classList.add('visible');
@@ -32,6 +30,11 @@ function AddRemMenu(button, menu) {
         menu.classList.remove('visible');
     });
 }
+
+AddRemMenu(buttonModel, subMenu);
+AddRemMenu(buttonContacts, contactsMenu);
+AddRemMenu(buttonServices, servicesMenu);
+AddRemMenu(buttonAccessories, accessoriesMenu);
 
 const Taycan = {
   name: "Taycan",
@@ -195,15 +198,20 @@ function loadModelInfo(model) {
   modelArticle.innerHTML = '';
   switch(model) {
     case 'cayenne':
-      loadCayenneModels(modelArticle);
-      break;
-
+        loadCayenneModels(modelArticle);
+        break;
     case 'porsche911':
-      load911Models(container);
-      break;
+        load911Models(modelArticle);
+        break;
     case 'taycan':
-      loadTaycanModels(modelArticle);
-      break;
+        loadTaycanModels(modelArticle);
+        break;
+    case 'panamera':
+        loadPanameraModels(modelArticle);
+        break;
+    case 'macan':
+        loadMacanModels(modelArticle);
+        break;
     default:
       container.innerHTML = '<p>Моделі для цієї категорії не знайдено!</p>';
       break;
@@ -494,26 +502,438 @@ function loadCayenneModels(container) {
   `;
 }
 
+function loadPanameraModels(container) {
+    container.innerHTML = `
+    <section class = "typeContainer">
+                <h1>Panamera</h1>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('Taycan')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche Panamera/PanameraModel.png" alt = "Taycan">
+        
+                        <h2>Panamera</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 353</p>
+                            <p>Макс. швид.: 272 км/год</p>
+                            <p>Прискорення: 5,3 с</p>
+                            <p>Запас ходу: ~450 км</p>
+                        </div>
+                        
+                        <h3>від 120 000$</h3>
+                    </div>
+                </a>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('Taycan4S')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche Panamera/Panamera4EHybridModel.png" alt = "Taycan">
+        
+                        <h2>Panamera 4 E-Hybrid</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 304</p>
+                            <p>Макс. швид.: 280 км/год</p>
+                            <p>Прискорення: 4,1 с</p>
+                            <p>Запас ходу: ~520 км</p>
+                        </div>
+                        
+                        <h3>від 130 000$</h3>
+                    </div>
+                </a>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('TaycanTurboGT')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche Panamera/Panamera4EHybridExecutiveModel.png" alt = "Taycan">
+        
+                        <h2>Panamera 4 E-Hybrid Executive</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 304</p>
+                            <p>Макс. швид.: 280 км/год</p>
+                            <p>Прискорення: 4,2 с</p>
+                            <p>Запас ходу: ~530 км</p>
+                        </div>
+                        
+                        <h3>від 140 000$</h3>
+                    </div>
+                </a>
+            </section>
+    
+            <section class = "typeContainer">
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('Taycan4SCrossTurismo')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche Panamera/PanameraTurboEHybridModel.png" alt = "Taycan">
+        
+                        <h2>Panamera Turbo E-Hybrid</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 519</p>
+                            <p>Макс. швид.: 315 км/год</p>
+                            <p>Прискорення: 3,2 с</p>
+                            <p>Запас ходу: ~530 км</p>
+                        </div>
+                        
+                        <h3>від 200 000$</h3>
+                    </div>
+                </a>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('TaycanTurboCrossTurismo')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche Panamera/PanameraGTSModel.png" alt = "Taycan">
+        
+                        <h2>Panamera GTS</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 500</p>
+                            <p>Макс. швид.: 302 км/год</p>
+                            <p>Прискорення: 3,8 с</p>
+                            <p>Запас ходу: ~550 км</p>
+                        </div>
+                        
+                        <h3>від 160 000$</h3>
+                    </div>
+                </a>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('TaycanTurboSCrossTurismo')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche Panamera/PanameraTurboSEHybridModel.png" alt = "Taycan">
+        
+                        <h2>Panamera Turbo S E-Hybrid</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 599</p>
+                            <p>Макс. швид.: 325 км/год</p>
+                            <p>Прискорення: 2,9 с</p>
+                            <p>Запас ходу: ~570 км</p>
+                        </div>
+                        
+                        <h3>від 250 000$</h3>
+                    </div>
+                </a>
+            </section>
+    `;
+}
+
 function load911Models(container) {
   container.innerHTML = `
-      <h1>Porsche 911</h1>
+      <section class = "typeContainer">
+                <h1>Carrera Coupe</h1>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('Taycan')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche 911/CarreraCoupeModel.png" alt = "Taycan">
+        
+                        <h2>Carrera Coupe</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 394</p>
+                            <p>Макс. швид.: 294 км/год</p>
+                            <p>Прискорення: 4,1 с</p>
+                            <p>Запас ходу: ~450 км</p>
+                        </div>
+                        
+                        <h3>від 160 000$</h3>
+                    </div>
+                </a>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('Taycan4S')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche 911/CarreraGTSModel.png" alt = "Taycan">
+        
+                        <h2>Taycan 4S</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 485</p>
+                            <p>Макс. швид.: 312 км/год</p>
+                            <p>Прискорення: 3,0 с</p>
+                            <p>Запас ходу: ~520 км</p>
+                        </div>
+                        
+                        <h3>від 210 000$</h3>
+                    </div>
+                </a>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('TaycanTurboGT')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche 911/Carrera4GTSModel.png" alt = "Taycan">
+        
+                        <h2>Carrera 4 GTS</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 485</p>
+                            <p>Макс. швид.: 312 км/год</p>
+                            <p>Прискорення: 3,0 с</p>
+                            <p>Запас ходу: ~530 км</p>
+                        </div>
+                        
+                        <h3>від 200 000$</h3>
+                    </div>
+                </a>
+            </section>
+    
+            <section class = "typeContainer">
+                <h1>Cabriolet</h1>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('Taycan4SCrossTurismo')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche 911/CarreraCabrioletModel.png" alt = "Taycan">
+        
+                        <h2>Carrera Cabriolet</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 394</p>
+                            <p>Макс. швид.: 291 км/год</p>
+                            <p>Прискорення: 4,3 с</p>
+                            <p>Запас ходу: ~530 км</p>
+                        </div>
+                        
+                        <h3>від 160 000$</h3>
+                    </div>
+                </a>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('TaycanTurboCrossTurismo')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche 911/CarreraGTSCabrioletModel.png" alt = "Taycan">
+        
+                        <h2>Carrera GTS Cabriolet</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 485</p>
+                            <p>Макс. швид.: 312 км/год</p>
+                            <p>Прискорення: 3,0 с</p>
+                            <p>Запас ходу: ~550 км</p>
+                        </div>
+                        
+                        <h3>від 210 000$</h3>
+                    </div>
+                </a>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('TaycanTurboSCrossTurismo')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche 911/Carrera4GTSCabriolet.png" alt = "Taycan">
+        
+                        <h2>Carrera 4 GTS Cabriolet</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 485</p>
+                            <p>Макс. швид.: 312 км/год</p>
+                            <p>Прискорення: 3,1 с</p>
+                            <p>Запас ходу: ~570 км</p>
+                        </div>
+                        
+                        <h3>від 230 000$</h3>
+                    </div>
+                </a>
+            </section>
+    
+            <section class = "typeContainer">
+                <h1>GT3</h1>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('TaycanSportTurismo')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche 911/GT3Model.png" alt = "Taycan">
+        
+                        <h2>GT3</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 510</p>
+                            <p>Макс. швид.: 311 км/год</p>
+                            <p>Прискорення: 3,4 с</p>
+                            <p>Запас ходу: ~600 км</p>
+                        </div>
+                        
+                        <h3>від 250 000$</h3>
+                    </div>
+                </a>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('Taycan4SSportTurismo')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche 911/GT3TouringModel.png" alt = "Taycan">
+        
+                        <h2>GT3 Touring</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 510</p>
+                            <p>Макс. швид.: 311 км/год</p>
+                            <p>Прискорення: 3,4 с</p>
+                            <p>Запас ходу: ~550 км</p>
+                        </div>
+                        
+                        <h3>від 250 000$</h3>
+                    </div>
+                </a>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('TaycanTurboSSportTurismo')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche 911/GT3RSModel.png" alt = "Taycan">
+        
+                        <h2>GT3 RS</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 525</p>
+                            <p>Макс. швид.: 296 км/год</p>
+                            <p>Прискорення: 3,2 с</p>
+                            <p>Запас ходу: ~580 км</p>
+                        </div>
+                        
+                        <h3>від 300 000$</h3>
+                    </div>
+                </a>
+            </section>
 
-      <a href="modelPage.html?model=911Carrera" class="carLink">
-          <div class="carContainer">
-              <img src="img/Porsche 911/911Carrera.png" alt="911 Carrera">
-              <h2>911 Carrera</h2>
-              <div class="addInfo">
-                  <p>Потужність (к/с): 450</p>
-                  <p>Макс. швид.: 300 км/год</p>
-                  <p>Прискорення: 3,2 с</p>
-                  <p>Запас ходу: ~500 км</p>
-              </div>
-              <h3>від 110 000$</h3>
-          </div>
-      </a>
-
-      <!-- інші моделі 911 -->
+            <section class = "typeContainer">
+                <h1>Special</h1>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('TaycanSportTurismo')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche 911/Targa4GTSModel.png" alt = "Taycan">
+        
+                        <h2>Targa 4 GTS</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 485</p>
+                            <p>Макс. швид.: 312 км/год</p>
+                            <p>Прискорення: 3,1 с</p>
+                            <p>Запас ходу: ~600 км</p>
+                        </div>
+                        
+                        <h3>від 230 000$</h3>
+                    </div>
+                </a>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('Taycan4SSportTurismo')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche 911/TurboSpecial50YearsModel.png" alt = "Taycan">
+        
+                        <h2>Turbo 50 Years</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 650</p>
+                            <p>Макс. швид.: 330 км/год</p>
+                            <p>Прискорення: 2,7 с</p>
+                            <p>Запас ходу: ~550 км</p>
+                        </div>
+                        
+                        <h3>від 310 000$</h3>
+                    </div>
+                </a>
+            </section>
   `;
+}
+
+function loadMacanModels(container) {
+    container.innerHTML = `
+    <section class = "typeContainer">
+                <h1>Macan</h1>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('Cayenne')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche Macan/MacanModel.png" alt = "Taycan">
+        
+                        <h2>Macan</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 265</p>
+                            <p>Макс. швид.: 232 км/год</p>
+                            <p>Прискорення: 6,4 с</p>
+                            <p>Запас ходу: ~450 км</p>
+                        </div>
+                        
+                        <h3>від 65 000$</h3>
+                    </div>
+                </a>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('Taycan4S')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche Macan/MacanSModel.png" alt = "Taycan">
+        
+                        <h2>Macan S</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 380</p>
+                            <p>Макс. швид.: 259 км/год</p>
+                            <p>Прискорення: 4,8 с</p>
+                            <p>Запас ходу: ~520 км</p>
+                        </div>
+                        
+                        <h3>від 75 000$</h3>
+                    </div>
+                </a>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('TaycanTurboGT')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche Macan/MacanGTSModel.png" alt = "Taycan">
+        
+                        <h2>Macan GTS</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 440</p>
+                            <p>Макс. швид.: 272 км/год</p>
+                            <p>Прискорення: 4,5 с</p>
+                            <p>Запас ходу: ~530 км</p>
+                        </div>
+                        
+                        <h3>від 95 000$</h3>
+                    </div>
+                </a>
+            </section>
+    
+            <section class = "typeContainer">
+                <h1>Macan Electric</h1>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('Taycan4SCrossTurismo')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche Macan/MacanElectricModel.png" alt = "Taycan">
+        
+                        <h2>Macan Electric</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 340</p>
+                            <p>Макс. швид.: 220 км/год</p>
+                            <p>Прискорення: 5,7 с</p>
+                            <p>Запас ходу: ~530 км</p>
+                        </div>
+                        
+                        <h3>від 80 000$</h3>
+                    </div>
+                </a>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('TaycanTurboCrossTurismo')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche Macan/Macan4SElectricModel.png" alt = "Taycan">
+        
+                        <h2>Macan 4S Electric</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 448</p>
+                            <p>Макс. швид.: 240 км/год</p>
+                            <p>Прискорення: 4,1 с</p>
+                            <p>Запас ходу: ~550 км</p>
+                        </div>
+                        
+                        <h3>від 90 000$</h3>
+                    </div>
+                </a>
+    
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('TaycanTurboSCrossTurismo')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche Macan/MacanTurboElectricModel.png" alt = "Taycan">
+        
+                        <h2>Macan Turbo Electric</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 584</p>
+                            <p>Макс. швид.: 260 км/год</p>
+                            <p>Прискорення: 3,3 с</p>
+                            <p>Запас ходу: ~570 км</p>
+                        </div>
+                        
+                        <h3>від 110 000$</h3>
+                    </div>
+                </a>
+            </section>
+    `;
 }
 
 

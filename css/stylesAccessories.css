@@ -402,6 +402,14 @@ article .accessoriesHeader h2 {
 .porscheQuestion img {
     width: 70%;
     height: auto;
+    opacity: 0;
+    transform: translateY(10rem);
+    transition: all 0.3s ease;
+}
+
+.porscheQuestion img.visible {
+    opacity: 1;
+    transform: translateY(0rem);
 }
 
 .porscheQuestion .questionText {
@@ -411,6 +419,14 @@ article .accessoriesHeader h2 {
     flex-direction: column;
     gap: 1rem;
     font-family: var(--font-family);
+    opacity: 0;
+    transform: translateY(10rem);
+    transition: all 0.3s ease;
+}
+
+.porscheQuestion .questionText.visible {
+    opacity: 1;
+    transform: translateY(0rem);
 }
 
 .porscheQuestion .questionText h3 {
@@ -446,7 +462,6 @@ article .accessoriesHeader h2 {
 
 .accessoriesBrand {
     background-color: #493628;
-    border-radius: 20px;
     padding: 4rem 7rem 8rem;
     display: flex;
     align-items: center;
@@ -456,6 +471,15 @@ article .accessoriesHeader h2 {
 .accessoriesBrand img {
     border-radius: 20px;
     width: 70%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: translateX(-20rem);
+    transition: all 0.3s ease;
+}
+
+.accessoriesBrand img.visible {
+    opacity: 1;
+    transform: translateX(0rem);
 }
 
 .brandBlockText {
@@ -463,6 +487,14 @@ article .accessoriesHeader h2 {
     flex-direction: column;
     gap: 1rem;
     font-family: var(--font-family);
+    opacity: 0;
+    transform: translateX(20rem);
+    transition: all 0.3s ease;
+}
+
+.brandBlockText.visible {
+    opacity: 1;
+    transform: translateY(0rem);
 }
 
 .brandBlockText h5 {

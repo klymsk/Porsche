@@ -77,6 +77,16 @@ nav {
     transition: opacity 0.3s ease-in-out;
 }
 
+.subMenu.visible {
+    display: grid; 
+    opacity: 1;
+}
+
+.subMenu.hidden {
+    opacity: 0;
+    display: none;
+}
+
 .subMenu a {
     display: flex;
     flex-direction: column;

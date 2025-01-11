@@ -56,6 +56,7 @@ AddRemMenu(buttonAccessories, accessoriesMenu);
 isVisible(".serviceText");
 isVisible(".serviceBlock h3");
 isVisible(".serviceBlock img");
+isVisible(".footerImg");
 
 
 

@@ -135,6 +135,72 @@ const TaycanTurboSSportTurismo = {
   pageImage: "img/Porsche Taycan/TaycanTurboSSportTurismoModelPage.png"
 };
 
+const Cayenne = {
+    name: "Cayenne",
+    price: "100 000$",
+    power: "353",
+    maxSpeed: "248 км/год",
+    acceleration: "6,9 с",
+    range: "~580 км",
+    image: "img/Porsche Cayenne/CayenneModel.png",
+    pageImage: "img/Porsche Cayenne/CayenneModel.png"
+};
+
+const CayenneS = {
+    name: "Cayenne S",
+    price: "140 000$",
+    power: "474",
+    maxSpeed: "273 км/год",
+    acceleration: "5,0 с",
+    range: "~580 км",
+    image: "img/Porsche Cayenne/CayenneSModel.png",
+    pageImage: "img/Porsche Cayenne/CayenneSModel.png"
+};
+
+const CayenneGTS = {
+    name: "Cayenne GTS",
+    price: "160 000$",
+    power: "500",
+    maxSpeed: "275 км/год",
+    acceleration: "4,4 с",
+    range: "~580 км",
+    image: "img/Porsche Cayenne/CayenneGTSModel.png",
+    pageImage: "img/Porsche Cayenne/CayenneGTSModel.png"
+};
+
+const CayenneCoupe = {
+    name: "Cayenne Coupe",
+    price: "120 000$",
+    power: "353",
+    maxSpeed: "248 км/год",
+    acceleration: "5,7 с",
+    range: "~580 км",
+    image: "img/Porsche Cayenne/CayenneCoupeModel.png",
+    pageImage: "img/Porsche Cayenne/CayenneCoupeModel.png"
+};
+
+const CayenneGTSCoupe = {
+    name: "Cayenne GTS Coupe",
+    price: "160 000$",
+    power: "500",
+    maxSpeed: "275 км/год",
+    acceleration: "4,4 с",
+    range: "~580 км",
+    image: "img/Porsche Cayenne/CayenneGTSCoupeModel.png",
+    pageImage: "img/Porsche Cayenne/CayenneGTSCoupeModel.png"
+};
+
+const CayenneTurboGTCoupe = {
+    name: "Cayenne Turbo GT Coupe",
+    price: "240 000$",
+    power: "659",
+    maxSpeed: "305 км/год",
+    acceleration: "3,3 с",
+    range: "~580 км",
+    image: "img/Porsche Cayenne/CayenneTurboGTCoupeModel.png",
+    pageImage: "img/Porsche Cayenne/CayenneTurboGTCoupeModel.png"
+};
+
 const observe = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -171,7 +237,13 @@ AddRemMenu(buttonAccessories, accessoriesMenu);
       TaycanTurboSCrossTurismo,
       TaycanSportTurismo,
       Taycan4SSportTurismo,
-      TaycanTurboSSportTurismo
+      TaycanTurboSSportTurismo,
+      Cayenne,
+      CayenneS,
+      CayenneGTS,
+      CayenneCoupe,
+      CayenneGTSCoupe,
+      CayenneTurboGTCoupe
     };
   
     if (models[modelName]) {
@@ -414,7 +486,7 @@ function loadCayenneModels(container) {
                     <div class = "carContainer">
                         <img src = "img/Porsche Cayenne/CayenneSModel.png" alt = "Taycan">
         
-                        <h2>Taycan S</h2>
+                        <h2>Cayenne S</h2>
         
                         <div class = "addInfo">
                             <p>Потужність (к/с): 474</p>
@@ -486,7 +558,7 @@ function loadCayenneModels(container) {
                     <div class = "carContainer">
                         <img src = "img/Porsche Cayenne/CayenneTurboGTCoupeModel.png" alt = "Taycan">
         
-                        <h2>CayenneTurboGTCoupeModel</h2>
+                        <h2>Cayenne Turbo GT Coupe</h2>
         
                         <div class = "addInfo">
                             <p>Потужність (к/с): 659</p>

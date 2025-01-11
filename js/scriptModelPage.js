@@ -119,6 +119,32 @@ function submitScreenInOut() {
 
 submitScreenInOut();
 
+function closeOtherDetails(event) {
+    const clickedDetails = event.target;  
+    const detailsElements = document.querySelectorAll("details");  
+
+    if (clickedDetails.open) {
+        detailsElements.forEach(function(details) {
+            if (details !== clickedDetails) {
+                details.removeAttribute("open");
+            }
+        });
+    }
+}
+
+function init() {
+    const detailsElements = document.querySelectorAll('details');
+    
+    detailsElements.forEach(function(details) {
+        details.addEventListener('toggle', closeOtherDetails); 
+    });
+}
+
+init();
+
+
+
+
 
 
 

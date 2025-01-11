@@ -429,6 +429,8 @@ article {
 .cars img {
     box-shadow: 2px 0px 15px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease;
+    width: 50%;
+    height: auto;
 }
 
 .cars img:hover {

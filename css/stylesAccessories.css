@@ -339,6 +339,14 @@ article .accessoriesHeader h2 {
 
 .accessoriesCarBlock {
     display: flex;
+    opacity: 0;
+    transform: translateY(10rem);
+    transition: all 0.3s ease;
+}
+
+.accessoriesCarBlock.visible {
+    opacity: 1;
+    transform: translateY(0rem);
 }
 
 .accessoriesCarBlock img {
@@ -358,13 +366,14 @@ article .accessoriesHeader h2 {
 .carBlockText details {
     font-family: var(--font-family);
     font-size: 1rem;
-    font-weight: var(--font-weight-regular);
+    font-weight: 300;
     color: #FBF8EF;
 }
 
 .carBlockText details summary {
     font-size: 1.5rem;
     font-weight: var(--font-weight-bold);
+    margin-bottom: 1rem;
 }
 
 .configuratorButton {
@@ -527,6 +536,14 @@ footer img {
     height: auto; 
     max-width: 50%; 
     display: block;
+    opacity: 0;
+    transform: translateX(50rem);
+    transition: all 0.8s ease;
+}
+
+footer img.visible {
+    opacity: 1;
+    transform: translateX(0rem);
 }
 
 .menuButtons {

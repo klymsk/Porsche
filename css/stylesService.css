@@ -443,6 +443,14 @@ footer img {
     height: auto; 
     max-width: 50%; 
     display: block;
+    opacity: 0;
+    transform: translateX(50rem);
+    transition: all 0.8s ease;
+}
+
+footer img.visible {
+    opacity: 1;
+    transform: translateX(0rem);
 }
 
 .menuButtons {

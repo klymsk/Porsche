@@ -453,7 +453,7 @@ article {
 .infoPrice {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    justify-content: space-around;
 }
 
 .carInfo {

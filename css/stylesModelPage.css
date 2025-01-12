@@ -759,7 +759,7 @@ article img {
 }
 
 .price p {
-    direction: rtl;
+    text-align: right;
     font-weight: 300;
     font-size: 1.5rem;
 }

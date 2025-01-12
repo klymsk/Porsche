@@ -62,6 +62,7 @@ article {
     background-color: #292929;
     border-radius: 20px;
     width: 40%;
+    height: 60rem;
     overflow: hidden;
     padding: 8rem 9rem 20rem;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
@@ -148,6 +149,7 @@ article img {
     flex-direction: column;
     gap: 3rem;
     width: 40%;
+    height: 60rem;
     overflow: hidden;
     padding: 8rem 9rem 20rem;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);

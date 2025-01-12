@@ -352,6 +352,7 @@ article .accessoriesHeader h2 {
 .accessoriesCarBlock img {
     width: 60%;
     height: auto;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .carBlockText {
@@ -361,6 +362,7 @@ article .accessoriesHeader h2 {
     padding: 2rem 3rem;
     width: 20%;
     height: auto;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .carBlockText details {

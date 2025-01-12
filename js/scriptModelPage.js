@@ -60,6 +60,8 @@ if (selectedModel) {
     <li><span>${selectedModel.acceleration}</span><br>Прискорення</li>
   `;
 
+  document.getElementById("imageModel").src = selectedModel.pageImage;
+  document.getElementById("priceModel").textContent = selectedModel.price;
   document.getElementById('configuratorName').textContent = selectedModel.name;
   document.getElementById('configuratorImg').src = selectedModel.pageImage;
 } else {

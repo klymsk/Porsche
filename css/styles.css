@@ -376,6 +376,12 @@ main {
     gap: 12.5rem;
 }
 
+@media (max-width: 768px) {
+    main {
+        gap: 8rem;
+    }
+}
+
 /* article */
 
 :root {

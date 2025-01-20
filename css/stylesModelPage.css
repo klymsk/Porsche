@@ -8,7 +8,6 @@ html {
     scroll-behavior: smooth; 
 }
 
-
 body {
     display: flex;
     flex-direction: column;
@@ -379,12 +378,24 @@ article {
     background-color: #493628;
 }
 
+@media (max-width: 768px) {
+    article {
+        padding: 1.5rem 1rem;
+    }
+}
+
 article img {
     max-width: 100%;  
     height: auto; 
     display: flex;
     justify-content: center;
     transform: scale(0.8);
+}
+
+@media (max-width: 768px) {
+    article img {
+        transform: scale(1);
+    }
 }
 
 .modelCar {
@@ -406,6 +417,29 @@ article img {
     font-size: 1rem;
 }
 
+@media (max-width: 768px) {
+    .modelCar {
+        font-size: 1.25rem;
+        gap: 0.25rem;
+    }
+
+    .modelCar h2 {
+        font-size: 1rem;
+    }
+
+    .modelCar span {
+        font-size: 0.7rem;
+    }
+}
+
+/* info */
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+}
+
 /* detailInfo */
 
 .detailInfo {
@@ -416,9 +450,17 @@ article img {
     text-align: center;
 }
 
+@media (max-width: 768px) {
+    .detailInfo {
+        margin-top: 0rem;
+        padding: 1.5rem 2rem;
+    }
+}
+
 .detailInfo ul {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     list-style: none;
 }
 
@@ -434,17 +476,44 @@ article img {
     font-weight: var(--font-weight-bold);
 }
 
+@media (max-width: 768px) {
+    .detailInfo li {
+        font-size: 0.8rem;
+        width: 8rem;
+    }
+
+    .detailInfo li:nth-child(1),
+    .detailInfo li:nth-child(2) {
+        margin-bottom: 1.5rem;
+    }
+
+    .detailInfo li span {
+        font-size: 1rem;
+    }
+}
+
 /* buttons */
 
 .buttons {
-    padding: 0 9.5rem;
-    margin: 8rem 0rem;
+    padding: 0rem 9.5rem;
+}
+
+@media (max-width: 768px) {
+    .buttons {
+        padding: 0rem 3rem;
+    }
 }
 
 .buttons ul {
     display: flex;
     justify-content: space-around;
     list-style: none;
+}
+
+@media (max-width: 768px) {
+    .buttons ul {
+        flex-wrap: wrap;
+    }
 }
 
 .buttons li {
@@ -454,13 +523,25 @@ article img {
     background-color: #493628;
     border: 5px solid #FBF8EF;
     border-radius: 20px;
-    width: 240px;
+    width: 15rem;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .buttons li:hover {
     background-color: #FBF8EF;
+}
+
+@media (max-width: 768px) {
+    .buttons li {
+        padding: 1.2rem 1rem;
+        width: 8rem;
+    }
+
+    .buttons li:nth-child(1),
+    .buttons li:nth-child(2) {
+        margin-bottom: 1.5rem;
+    }
 }
 
 .buttons a {
@@ -474,6 +555,12 @@ article img {
 
 .buttons li:hover a {
     color: #493628;
+}
+
+@media (max-width: 768px) {
+    .buttons a {
+        font-size: 0.7rem;
+    }
 }
 
 /* generalInfo */

@@ -55,7 +55,7 @@ if (selectedModel) {
   
   document.getElementById('modelDetails').innerHTML = `
     <li><span>${selectedModel.power}</span><br>Потужність (к/с)</li>
-    <li><span>${selectedModel.maxSpeed}</span><br>Максимальна швид.</li>
+    <li><span>${selectedModel.maxSpeed}</span><br>Макс. швид.</li>
     <li><span>${selectedModel.range}</span><br>Запас ходу</li>
     <li><span>${selectedModel.acceleration}</span><br>Прискорення</li>
   `;
@@ -254,10 +254,10 @@ function editHtml() {
         </nav>
 
 
-            <div class = "headerLogo">
-                <p class = "headerText">Porsche</p>
-                <img src = "img/General/mainLogoPhone.png" alt = "mainLogo" class="main-ico">
-            </div>
+        <div class = "headerLogo">
+            <p class = "headerText">Porsche</p>
+            <img src = "img/General/mainLogoPhone.png" alt = "mainLogo" class="main-ico">
+        </div>
         `;
 
         const buttonNavMenu = document.getElementById("buttonNavMenu");

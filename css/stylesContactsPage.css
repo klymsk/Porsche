@@ -408,7 +408,9 @@ article:nth-child(2) {
     .generalBlock {
         border-radius: 0px;
         width: 100%;
+        height: 50rem;
         padding: 3rem 1.5rem;
+        overflow: hidden;
     }
 }
 
@@ -458,6 +460,12 @@ article:nth-child(2) {
     margin-left: auto;
 }
 
+@media (max-width: 768px) {
+    .generalBlock:nth-child(2) ul {
+        margin-left: 0rem;
+    }
+}
+
 .generalBlock li {
     display: flex;
     flex-direction: column;
@@ -495,12 +503,25 @@ article:nth-child(2) {
     width: 60%;
 }
 
+@media (max-width: 768px) {
+    .generalBlock ul select {
+        font-size: 0.8rem;
+        width: 100%;
+    }
+}
+
 .generalBlock .map iframe {
     border-radius: 20px;
 }
 
 .generalBlock:nth-child(2) .map {
     margin-left: auto;
+}
+
+@media (max-width: 768px) {
+    .generalBlock:nth-child(2) .map {
+        margin-left: 0rem;
+    }
 }
 
 .generalBlock img {
@@ -524,7 +545,17 @@ article:nth-child(2) {
 
 @media (max-width: 768px) {
     .generalBlock img {
-        width: 100%;
+        width: 40rem;
+        height: auto;
+        height: auto;
+        bottom: -5rem;
+        left: -15rem;
+    }
+
+    .generalBlock:nth-child(2) img {
+        bottom: -3rem;
+        right: 5rem;
+        width: 40rem;
         height: auto;
     }
 }
@@ -541,6 +572,7 @@ article:nth-child(2) {
 @media (max-width: 768px) {
     .generalInfo {
         flex-direction: column;
+        padding-right: 0rem;
         gap: 1rem;
     }
 }
@@ -584,8 +616,14 @@ article:nth-child(2) {
 
 @media (max-width: 768px) {
     .generalInfo .text {
-        font-size: 1rem;
+        font-size: 1.5rem;
         color: #FBF8EF;
+        padding: 0rem 1.5rem;
+        gap: 2rem;
+    }
+
+    .generalInfo .text.visible {
+        transform: translateY(-5rem);
     }
 }
 
@@ -596,7 +634,8 @@ article:nth-child(2) {
 
 @media (max-width: 768px) {
     .generalInfo .text p {
-        font-size: 0.5;
+        font-size: 0.5rem;
+        color: #4F4F4F;
     }
 }
 

@@ -91,6 +91,8 @@ document.getElementById("citySelect").addEventListener("change", changeMap);
 
 function editHtml() {
     const header = document.getElementById("header");
+    const map1 = document.getElementById("map1");
+    const map2 = document.getElementById("map2");
     const width = window.innerWidth;
 
     if (width < 768) {
@@ -202,6 +204,18 @@ function editHtml() {
             <div class = "headerLogo">
                 <p class = "headerText">Porsche</p>
                 <img src = "img/General/mainLogoPhone.png" alt = "mainLogo" class="main-ico">
+            </div>
+        `;
+
+        map1.innerHTML = `
+            <div class = "map" id = "map1">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3008.8104561517025!2d9.226359486092928!3d48.79304820583668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1734949356548!5m2!1suk!2sua" width="320" height="160" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        `;
+
+        map2.innerHTML = `
+            <div class = "map" id = "map2">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d671.9131581702331!2d30.88103803339791!3d50.37550293934761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1735851689250!5m2!1suk!2sua" width="320" height="160" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         `;
 

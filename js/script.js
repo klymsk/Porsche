@@ -36,6 +36,7 @@ AddRemMenu(buttonContacts, contactsMenu);
 AddRemMenu(buttonServices, servicesMenu);
 AddRemMenu(buttonAccessories, accessoriesMenu);
 
+
 const observe = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -234,6 +235,11 @@ function editHtml() {
                 <p class = "headerText">Porsche</p>
                 <img src = "img/General/mainLogoPhone.png" alt = "mainLogo" class="main-ico">
             </div>
+
+            <a href = "logInPage.html" class = "logIn">
+                <img src = "img/General/headeLogIn.png" alt = "profile">
+                <p>Вхід в кабінет</p>
+            </a>
         `;
 
         const buttonNavMenu = document.getElementById("buttonNavMenu");
@@ -243,7 +249,6 @@ function editHtml() {
             const navMenu = document.getElementById("nav");
             navMenu.classList.toggle("visible");
             body.classList.toggle("no-scroll");
-
         });
     }
 }

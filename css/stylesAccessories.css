@@ -16,6 +16,18 @@ body {
     background-color: #FBF8EF;
 }
 
+@media (max-width: 768px) {
+    body {
+        gap: 6rem;
+    }
+
+    .no-scroll {
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1009;
+    }
+}
+
 /* header - nav */
 
 header {
@@ -25,6 +37,41 @@ header {
     align-items: center;
     position: relative;
     margin: 40px 10px;
+}
+
+@media (max-width: 768px) {
+    header {
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 2rem 0rem;
+    }
+
+    header button {
+        border: none; 
+        z-index: 1011;
+    }
+}
+
+@media (max-width: 768px) {
+    .headerLogo {
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        flex-grow: 1;
+    }
+
+    .headerLogo p {
+        font-family: var(--font-family);
+        font-size: 1rem;
+        font-weight: var(--font-weight-bold);
+        color: var(--font-color);
+    }
+
+    .headerLogo img {
+        width: 30%;
+        height: auto;
+        transform: translateX(-0.5rem);
+    }
 }
 
 header .logo {
@@ -40,11 +87,39 @@ nav {
     flex-grow: 1; 
 }
 
+@media (max-width: 768px) {
+    nav {
+        opacity: 0;
+        position: fixed;
+        justify-content: start;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        height: 100%;
+        background-color: #FBF8EF;
+        padding: 7rem 2rem;
+        z-index: 1010;
+        transition: all 0.3s ease;
+    }
+
+    nav.visible {
+        display: flex;
+        opacity: 1;
+        left: 0;
+    }
+}
+
 .nav-list {
     display: flex;
     flex-direction: row;
     gap: 35px;
     list-style: none;
+}
+
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+    }
 }
 
 .nav-list > li:nth-of-type(4) > .navButton {
@@ -289,6 +364,12 @@ main {
     margin-bottom: 10rem;
 }
 
+@media (max-width: 768px) {
+    main {
+        gap: 8rem;
+    }
+}
+
 /* article */
 
 :root {
@@ -310,6 +391,14 @@ article img {
     height: auto;
 }
 
+@media (max-width: 768px) {
+    article img {
+        width: 100%;
+        height: 20rem;
+        object-fit: cover;
+    }
+}
+
 article .accessoriesHeader {
     display: flex;
     flex-direction: column;
@@ -328,6 +417,14 @@ article .accessoriesHeader h2 {
     font-weight: var(--font-weight-bold);
 }
 
+@media (max-width: 768px) {
+    article .accessoriesHeader h1,
+    article .accessoriesHeader h2 {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
 /* carAccessories */
 
 .carAccessories {
@@ -335,6 +432,12 @@ article .accessoriesHeader h2 {
     flex-direction: column;
     gap: 6rem;
     padding: 0rem 4rem;
+}
+
+@media (max-width: 768px) {
+    .carAccessories {
+        padding: 0rem 1rem;
+    }
 }
 
 .accessoriesCarBlock {
@@ -349,10 +452,22 @@ article .accessoriesHeader h2 {
     transform: translateY(0rem);
 }
 
+@media (max-width: 768px) {
+    .accessoriesCarBlock {
+        flex-direction: column;
+    }
+}
+
 .accessoriesCarBlock img {
     width: 60%;
     height: auto;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .accessoriesCarBlock img {
+        width: 100%;
+    }
 }
 
 .carBlockText {
@@ -363,6 +478,16 @@ article .accessoriesHeader h2 {
     width: 20%;
     height: auto;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .carBlockText {
+        border-radius: 0px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        width: 100%;
+        padding: 1.5rem 1rem;
+    }
 }
 
 .carBlockText details {
@@ -376,6 +501,16 @@ article .accessoriesHeader h2 {
     font-size: 1.5rem;
     font-weight: var(--font-weight-bold);
     margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .carBlockText details {
+        font-size: 0.8rem;
+    }
+
+    .carBlockText details summary {
+        font-size: 1rem;
+    }
 }
 
 .configuratorButton {
@@ -402,12 +537,29 @@ article .accessoriesHeader h2 {
     border: none;
 }
 
+@media (max-width: 768px) {
+    .configuratorButton h3 {
+        font-size: 1rem;
+    }
+
+    .configuratorButton button {
+        font-size: 1rem;
+    }
+}
+
 /* question */
 
 .porscheQuestion {
     display: flex;
     align-items: center;
     gap: 3rem;
+}
+
+@media (max-width: 768px) {
+    .porscheQuestion {
+        flex-direction: column;
+        gap: 0rem;
+    }
 }
 
 .porscheQuestion img {
@@ -421,6 +573,14 @@ article .accessoriesHeader h2 {
 .porscheQuestion img.visible {
     opacity: 1;
     transform: translateY(0rem);
+}
+
+@media (max-width: 768px) {
+    .porscheQuestion img {
+        width: 100%;
+        height: 20rem;
+        object-fit: cover;
+    }
 }
 
 .porscheQuestion .questionText {
@@ -440,6 +600,13 @@ article .accessoriesHeader h2 {
     transform: translateY(0rem);
 }
 
+@media (max-width: 768px) {
+    .porscheQuestion .questionText {
+        width: 100%;
+        padding: 0rem 1rem;
+    }
+}
+
 .porscheQuestion .questionText h3 {
     font-size: 1.5rem;
     font-weight: var(--font-weight-bold);
@@ -450,6 +617,17 @@ article .accessoriesHeader h2 {
     font-size: 1rem;
     font-weight: var(--font-weight-regular);
     color: #4F4F4F;
+}
+
+@media (max-width: 768px) {
+    .porscheQuestion .questionText h3 {
+        color: #FBF8EF;
+        transform: translateY(-3rem);
+    }
+
+    .porscheQuestion .questionText p {
+        transform: translateY(-2rem);
+    }
 }
 
 /* brandAccessories */
@@ -471,12 +649,26 @@ article .accessoriesHeader h2 {
     font-weight: var(--font-weight-bold);
 }
 
+@media (max-width: 768px) {
+    .accessoriesBrandHeader h3,
+    .accessoriesBrandHeader h4 {
+        font-size: 1rem;
+    }
+}
+
 .accessoriesBrand {
     background-color: #493628;
     padding: 4rem 7rem 8rem;
     display: flex;
     align-items: center;
     gap: 4rem;
+}
+
+@media (max-width: 768px) {
+    .accessoriesBrand {
+        padding: 3rem 1.5rem;
+        flex-direction: column;
+    }
 }
 
 .accessoriesBrand img {
@@ -491,6 +683,13 @@ article .accessoriesHeader h2 {
 .accessoriesBrand img.visible {
     opacity: 1;
     transform: translateX(0rem);
+}
+
+@media (max-width: 768px) {
+    .accessoriesBrand img {
+        width: 100%;
+        transform: translateX(-10rem);
+    }
 }
 
 .brandBlockText {
@@ -521,6 +720,17 @@ article .accessoriesHeader h2 {
     width: 80%;
 }
 
+@media (max-width: 768px) {
+    .brandBlockText h5 {
+        font-size: 1rem;
+    }
+
+    .brandBlockText p {
+        font-size: 0.8rem;
+        width: 100%;
+    }
+}
+
 /* footer */
 
 footer {
@@ -531,6 +741,15 @@ footer {
     background-color: #292929;
     padding: 7.5rem 7.5rem;
     overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 2rem 2.5rem;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+    }
 }
 
 footer img {
@@ -548,10 +767,27 @@ footer img.visible {
     transform: translateX(0rem);
 }
 
+@media (max-width: 768px) {
+    footer img {
+        transform: translateX(0rem);
+    }
+}
+
 .menuButtons {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .menuButtons {
+        gap: 1.5rem;
+    }
+
+    .menuButtons:nth-child(1),
+    .menuButtons:nth-child(3) {
+        align-items: center;
+    }
 }
 
 .footerButton {
@@ -566,4 +802,10 @@ footer img.visible {
 .menuButtons:nth-of-type(1) .footerButton:hover {
     transform: scale(1.05);
     color: #FFF3D0;
+}
+
+@media (max-width: 768px) {
+    .footerButton {
+        font-size: 0.8rem;
+    }
 }

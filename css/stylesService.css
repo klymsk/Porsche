@@ -419,6 +419,12 @@ article img {
 }
 
 @media (max-width: 768px) {
+    .textHeader {
+        gap: 2rem;
+        text-align: center;
+        padding: 0rem 3rem;
+    }
+
     .textHeader h1 {
         font-size: 1rem;
     }
@@ -495,6 +501,18 @@ article img {
     left: -10rem;
 }
 
+@media (max-width: 768px) {
+    .serviceBlock img {
+        right: -7rem;
+        bottom: -2rem;
+        transform: translateY(4rem);
+    }
+
+    .serviceBlock:nth-child(2n) img {
+        left: -7rem;
+    }
+}
+
 .serviceText {
     display: flex;
     flex-direction: column;
@@ -512,6 +530,12 @@ article img {
 .serviceText.visible {
     transform: translateY(0rem);
     opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .serviceText {
+        padding: 3rem 2rem 7rem 2rem;
+    }
 }
 
 .kmServices .serviceBlock:nth-child(2n) .serviceText {
@@ -536,6 +560,13 @@ article img {
     font-weight: var(--font-weight-bold);
     color: #FBF8EF;
     max-width: 25rem;
+}
+
+@media (max-width: 768px) {
+    .serviceText ul {
+        font-size: 0.8rem;
+        gap: 2rem;
+    }
 }
 
 

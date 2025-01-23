@@ -354,6 +354,13 @@ nav {
     right: 10px;
 }
 
+@media (max-width: 768px) {
+    .logIn {
+        transform: scale(0.6);
+        right: -3rem;
+    }
+}
+
 .logIn img {
     opacity: 0.3;
 }

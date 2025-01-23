@@ -15,6 +15,12 @@ body {
     background-color: #FBF8EF;
 }
 
+@media (max-width: 768px) {
+    body {
+        gap: 5rem;
+    }
+}
+
 :root {
     --font-family: "Unbounded";
     --font-weight-bold: 800;
@@ -33,11 +39,25 @@ header {
     margin: 40px 10px;
 }
 
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        margin: 0px;
+        padding: 1rem 2rem;
+    }
+}
+
 header .logo {
     position: absolute;
     left: 10px; 
     top: 50%;
     transform: translateY(-50%); 
+}
+
+@media (max-width: 768px) {
+    header .logo {
+        position: relative;
+    }
 }
 
 header h1 {
@@ -47,12 +67,24 @@ header h1 {
    color: var(--font-color); 
 }
 
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1rem;
+    }
+}
+
 /* main */
 
 main {
     display: flex;
     justify-content: center;
     margin-bottom: 16rem;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 0rem 1rem;
+    }
 }
 
 article {
@@ -68,6 +100,13 @@ article {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     position: relative;
     z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    article {
+        padding: 5rem 1rem;
+        width: 100%;
+    }
 }
 
 article button {
@@ -154,6 +193,13 @@ article img {
     padding: 8rem 9rem 20rem;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     z-index: 1005;
+}
+
+@media (max-width: 768px) {
+    .registrationMenu {
+        width: 90%;
+        padding: 5rem 1rem;
+    }
 }
 
 .registrationMenu p {

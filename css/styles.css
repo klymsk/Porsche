@@ -51,7 +51,8 @@ header {
         flex-grow: 1;
     }
 
-    .headerLogo p {
+    .headerLogo a {
+        text-decoration: none;
         font-family: var(--font-family);
         font-size: 1rem;
         font-weight: var(--font-weight-bold);
@@ -97,6 +98,13 @@ nav {
         display: flex;
         opacity: 1;
         left: 0;
+    }
+
+    nav.hidden {
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        left: -100%;
     }
 }
 
@@ -152,6 +160,35 @@ nav {
 .subMenu.hidden {
     opacity: 0;
     display: none;
+}
+
+@media (max-width: 768px) {
+    .subMenuPhone {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        list-style: none;
+        margin-top: 3rem;
+    }
+
+    .subMenuPhone a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .subMenuPhone p {
+        font-size: 0.5rem;
+        font-weight: var(--font-weight-bold);
+        color: #4F4F4F;
+    }
+
+    .subMenuPhone img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 .subMenu a {

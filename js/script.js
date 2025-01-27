@@ -10,24 +10,19 @@ const servicesMenu = document.querySelector(".servicesMenu");
 const buttonAccessories = document.querySelector("#buttonAccessories");
 const accessoriesMenu = document.querySelector(".accessoriesMenu");
 
+function isMobile() {
+    return window.innerWidth < 768; 
+}
+
 function AddRemMenu(button, menu) {
     button.addEventListener('mouseenter', () => {
         menu.classList.add('visible');
         menu.classList.remove('hidden');
     });
+
     button.addEventListener('mouseleave', () => {
-        menu.classList.add('hidden');
         menu.classList.remove('visible');
-    });
-    
-    menu.addEventListener('mouseenter', () => {
-        menu.classList.add('visible');
-        menu.classList.remove('hidden');
-    });
-    
-    menu.addEventListener('mouseleave', () => {
         menu.classList.add('hidden');
-        menu.classList.remove('visible');
     });
 }
 
@@ -35,6 +30,8 @@ AddRemMenu(buttonModel, subMenu);
 AddRemMenu(buttonContacts, contactsMenu);
 AddRemMenu(buttonServices, servicesMenu);
 AddRemMenu(buttonAccessories, accessoriesMenu);
+
+
 
 
 const observe = new IntersectionObserver((entries, observer) => {
@@ -133,45 +130,50 @@ function editHtml() {
 
             <nav id = "nav">
             <ul class="nav-list">
-                <li><a href="#" class="navButton" id = "buttonModels">Моделі</a></li>
-                    <ul class="subMenu">
-                        <li>
-                            <a href="models.html?model=taycan">
-                                <p>Porsche Taycan</p>
-                                <img src = "img/Menu/TaycanMenu.png" alt = "Porsche Taycan">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="models.html?model=porsche911">
-                                <p>Porsche 911</p>
-                                <img src = "img/Menu/Porsche911Menu.png" alt = "Porsche 911">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="models.html?model=cayenne">
-                                <p>Porsche Cayenne</p>
-                                <img src = "img/Menu/CayenneMenu.png" alt = "Porsche Cayenne">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="models.html?model=macan">
-                                <p>Porsche Macan</p>
-                                <img src = "img/Menu/MacanMenu.png" alt = "Porsche Macan">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="models.html?model=panamera">
-                                <p>Porsche Panamera</p>
-                                <img src = "img/Menu/PanameraMenu.png" alt = "Porsche Panamera">
-                            </a>
-                        </li>
-                        <li>
-                            <a href = "#">
-                            <p>Інші моделі</p>
-                            <img src = "img/Menu/OtherCarsMenu.png" alt = "OtherCars">
-                            </a>
-                        </li>
-                    </ul>
+                <li>
+                    <details class="navButton" id = "buttonModels">
+                        <summary>Моделі</summary>
+                            <ul class="subMenuPhone">
+                                <li>
+                                    <a href="models.html?model=taycan">
+                                        <p>Porsche Taycan</p>
+                                        <img src = "img/Menu/TaycanMenu.png" alt = "Porsche Taycan">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="models.html?model=porsche911">
+                                        <p>Porsche 911</p>
+                                        <img src = "img/Menu/Porsche911Menu.png" alt = "Porsche 911">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="models.html?model=cayenne">
+                                        <p>Porsche Cayenne</p>
+                                        <img src = "img/Menu/CayenneMenuPhone.png" alt = "Porsche Cayenne">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="models.html?model=macan">
+                                        <p>Porsche Macan</p>
+                                        <img src = "img/Menu/MacanMenu.png" alt = "Porsche Macan">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="models.html?model=panamera">
+                                        <p>Porsche Panamera</p>
+                                        <img src = "img/Menu/PanameraMenu.png" alt = "Porsche Panamera">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href = "#">
+                                        <p>Інші моделі</p>
+                                        <img src = "img/Menu/OtherCarsMenu.png" alt = "OtherCars">
+                                    </a>
+                                </li>
+                            </ul>
+                    </details>
+                </li>
+                    
                 <li><a href="contactsPage.html" class="navButton" id = "buttonContacts">Контакти</a></li>
                     <ul class = "contactsMenu">
                         <li>
@@ -232,7 +234,7 @@ function editHtml() {
 
 
             <div class = "headerLogo">
-                <p class = "headerText">Porsche</p>
+                <a href="index.html" class = "headerText">Porsche</a>
                 <img src = "img/General/mainLogoPhone.png" alt = "mainLogo" class="main-ico">
             </div>
 

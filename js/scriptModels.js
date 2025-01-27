@@ -201,6 +201,28 @@ const CayenneTurboGTCoupe = {
     pageImage: "img/Porsche Cayenne/CayenneTurboGTCoupeModel.png"
 };
 
+const CarreraCoupe = {
+    name: "Carrera Coupe",
+    price: "160 000$",
+    power: "394",
+    maxSpeed: "294 км/год",
+    acceleration: "4,1 с",
+    range: "~450 км",
+    image: "img/Porsche 911/CarreraCoupeModel.png",
+    pageImage: "img/Porsche 911/CarreraCoupeModel.png"
+};
+
+const CarreraGTS = {
+    name: "Carrera GTS",
+    price: "210 000$",
+    power: "485",
+    maxSpeed: "312 км/год",
+    acceleration: "3,0 с",
+    range: "~520 км",
+    image: "img/Porsche 911/CarreraGTSModel.png",
+    pageImage: "img/Porsche 911/CarreraGTSModel.png"
+};
+
 const observe = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -243,7 +265,9 @@ AddRemMenu(buttonAccessories, accessoriesMenu);
       CayenneGTS,
       CayenneCoupe,
       CayenneGTSCoupe,
-      CayenneTurboGTCoupe
+      CayenneTurboGTCoupe,
+      CarreraCoupe,
+      CarreraGTS
     };
   
     if (models[modelName]) {
@@ -283,6 +307,9 @@ function loadModelInfo(model) {
         break;
     case 'macan':
         loadMacanModels(modelArticle);
+        break;
+    case 'other':
+        modelArticle.innerHTML = `<p class = "otherModelsMessage">На даний момент, немає інших моделей<br>Чекайте оновлень.<p>`
         break;
     default:
       container.innerHTML = '<p>Моделі для цієї категорії не знайдено!</p>';
@@ -482,7 +509,7 @@ function loadCayenneModels(container) {
                     </div>
                 </a>
     
-                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('Taycan4S')">
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('CayenneS')">
                     <div class = "carContainer">
                         <img src = "img/Porsche Cayenne/CayenneSModel.png" alt = "Taycan">
         
@@ -499,7 +526,7 @@ function loadCayenneModels(container) {
                     </div>
                 </a>
     
-                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('TaycanTurboGT')">
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('CayenneGTS')">
                     <div class = "carContainer">
                         <img src = "img/Porsche Cayenne/CayenneGTSModel.png" alt = "Taycan">
         
@@ -520,7 +547,7 @@ function loadCayenneModels(container) {
             <section class = "typeContainer">
                 <h1>Cayenne Coupe</h1>
     
-                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('Taycan4SCrossTurismo')">
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('CayenneCoupe')">
                     <div class = "carContainer">
                         <img src = "img/Porsche Cayenne/CayenneCoupeModel.png" alt = "Taycan">
         
@@ -537,7 +564,7 @@ function loadCayenneModels(container) {
                     </div>
                 </a>
     
-                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('TaycanTurboCrossTurismo')">
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('CayenneGTSCoupe')">
                     <div class = "carContainer">
                         <img src = "img/Porsche Cayenne/CayenneGTSCoupeModel.png" alt = "Taycan">
         
@@ -554,7 +581,7 @@ function loadCayenneModels(container) {
                     </div>
                 </a>
     
-                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('TaycanTurboSCrossTurismo')">
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('CayenneTurboGTCoupe')">
                     <div class = "carContainer">
                         <img src = "img/Porsche Cayenne/CayenneTurboGTCoupeModel.png" alt = "Taycan">
         
@@ -692,7 +719,7 @@ function load911Models(container) {
       <section class = "typeContainer">
                 <h1>Carrera Coupe</h1>
     
-                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('Taycan')">
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('CarreraCoupe')">
                     <div class = "carContainer">
                         <img src = "img/Porsche 911/CarreraCoupeModel.png" alt = "Taycan">
         
@@ -709,11 +736,11 @@ function load911Models(container) {
                     </div>
                 </a>
     
-                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('Taycan4S')">
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('CarreraGTS')">
                     <div class = "carContainer">
                         <img src = "img/Porsche 911/CarreraGTSModel.png" alt = "Taycan">
         
-                        <h2>Taycan 4S</h2>
+                        <h2>Carrera GTS</h2>
         
                         <div class = "addInfo">
                             <p>Потужність (к/с): 485</p>
@@ -1021,45 +1048,49 @@ function editHtml() {
 
             <nav id = "nav">
             <ul class="nav-list">
-                <li><a href="#" class="navButton" id = "buttonModels">Моделі</a></li>
-                    <ul class="subMenu">
-                        <li>
-                            <a href="models.html?model=taycan">
-                                <p>Porsche Taycan</p>
-                                <img src = "img/Menu/TaycanMenu.png" alt = "Porsche Taycan">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="models.html?model=porsche911">
-                                <p>Porsche 911</p>
-                                <img src = "img/Menu/Porsche911Menu.png" alt = "Porsche 911">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="models.html?model=cayenne">
-                                <p>Porsche Cayenne</p>
-                                <img src = "img/Menu/CayenneMenu.png" alt = "Porsche Cayenne">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="models.html?model=macan">
-                                <p>Porsche Macan</p>
-                                <img src = "img/Menu/MacanMenu.png" alt = "Porsche Macan">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="models.html?model=panamera">
-                                <p>Porsche Panamera</p>
-                                <img src = "img/Menu/PanameraMenu.png" alt = "Porsche Panamera">
-                            </a>
-                        </li>
-                        <li>
-                            <a href = "#">
-                            <p>Інші моделі</p>
-                            <img src = "img/Menu/OtherCarsMenu.png" alt = "OtherCars">
-                            </a>
-                        </li>
-                    </ul>
+                <li>
+                    <details class="navButton" id = "buttonModels">
+                        <summary>Моделі</summary>
+                            <ul class="subMenuPhone">
+                                <li>
+                                    <a href="models.html?model=taycan">
+                                        <p>Porsche Taycan</p>
+                                        <img src = "img/Menu/TaycanMenu.png" alt = "Porsche Taycan">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="models.html?model=porsche911">
+                                        <p>Porsche 911</p>
+                                        <img src = "img/Menu/Porsche911Menu.png" alt = "Porsche 911">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="models.html?model=cayenne">
+                                        <p>Porsche Cayenne</p>
+                                        <img src = "img/Menu/CayenneMenuPhone.png" alt = "Porsche Cayenne">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="models.html?model=macan">
+                                        <p>Porsche Macan</p>
+                                        <img src = "img/Menu/MacanMenu.png" alt = "Porsche Macan">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="models.html?model=panamera">
+                                        <p>Porsche Panamera</p>
+                                        <img src = "img/Menu/PanameraMenu.png" alt = "Porsche Panamera">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href = "#">
+                                        <p>Інші моделі</p>
+                                        <img src = "img/Menu/OtherCarsMenu.png" alt = "OtherCars">
+                                    </a>
+                                </li>
+                            </ul>
+                    </details>
+                </li>
                 <li><a href="contactsPage.html" class="navButton" id = "buttonContacts">Контакти</a></li>
                     <ul class = "contactsMenu">
                         <li>
@@ -1120,7 +1151,7 @@ function editHtml() {
 
 
             <div class = "headerLogo">
-                <p class = "headerText">Porsche</p>
+                <a href="index.html" class = "headerText">Porsche</a>
                 <img src = "img/General/mainLogoPhone.png" alt = "mainLogo" class="main-ico">
             </div>
         `;

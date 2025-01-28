@@ -19,12 +19,12 @@ function AddRemMenu(button, menu) {
         menu.classList.add('hidden');
         menu.classList.remove('visible');
     });
-    
+
     menu.addEventListener('mouseenter', () => {
         menu.classList.add('visible');
         menu.classList.remove('hidden');
     });
-    
+
     menu.addEventListener('mouseleave', () => {
         menu.classList.add('hidden');
         menu.classList.remove('visible');
@@ -291,22 +291,24 @@ window.onload = function() {
 
 function loadModelInfo(model) {
   const modelArticle = document.getElementById("article");
+  const questionSection = document.getElementById("question");
+
   modelArticle.innerHTML = '';
   switch(model) {
     case 'cayenne':
-        loadCayenneModels(modelArticle);
+        loadCayenneModels(modelArticle, questionSection);
         break;
     case 'porsche911':
-        load911Models(modelArticle);
+        load911Models(modelArticle, questionSection);
         break;
     case 'taycan':
-        loadTaycanModels(modelArticle);
+        loadTaycanModels(modelArticle, questionSection);
         break;
     case 'panamera':
-        loadPanameraModels(modelArticle);
+        loadPanameraModels(modelArticle, questionSection);
         break;
     case 'macan':
-        loadMacanModels(modelArticle);
+        loadMacanModels(modelArticle, questionSection);
         break;
     case 'other':
         modelArticle.innerHTML = `<p class = "otherModelsMessage">На даний момент, немає інших моделей<br>Чекайте оновлень.<p>`
@@ -318,8 +320,8 @@ function loadModelInfo(model) {
 
 }
 
-function loadTaycanModels(container) {
-  container.innerHTML = `
+function loadTaycanModels(container, questionSection) {
+    container.innerHTML = `
      <section class = "typeContainer">
                 <h1>Taycan</h1>
     
@@ -484,11 +486,16 @@ function loadTaycanModels(container) {
                     </div>
                 </a>
             </section>
-  `;
+    `;
+
+    questionSection.innerHTML = `
+        <h2>Чому Taycan?</h2>
+        <p>Електричний спорткар, який не поступається у динаміці та потужності традиційним моделям Porsche. Його миттєвий розгін, точне керування та інноваційні технології дарують неймовірні враження від водіння. Taycan — це майбутнє автомобільної індустрії, яке поєднує екологічність і продуктивність без компромісів.</p>
+    `;
 }
 
-function loadCayenneModels(container) {
-  container.innerHTML = `
+function loadCayenneModels(container, questionSection) {
+    container.innerHTML = `
       <section class = "typeContainer">
                 <h1>Cayenne</h1>
     
@@ -598,10 +605,15 @@ function loadCayenneModels(container) {
                     </div>
                 </a>
             </section>
-  `;
+    `;
+
+    questionSection.innerHTML = `
+        <h2>Чому Cayenne?</h2>
+        <p>Це позашляховик, який поєднує в собі потужність спортивного автомобіля та універсальність, необхідну для активного відпочинку. Завдяки надсучасним технологіям та високому рівню комфорту, Cayenne дарує водіям незабутні враження, як на трасі, так і в умовах бездоріжжя. Його динаміка, ефективність і розкішний інтер'єр роблять Cayenne ідеальним вибором для тих, хто шукає екстраординарні можливості у своєму автомобілі.</p>
+    `;
 }
 
-function loadPanameraModels(container) {
+function loadPanameraModels(container, questionSection) {
     container.innerHTML = `
     <section class = "typeContainer">
                 <h1>Panamera</h1>
@@ -712,10 +724,15 @@ function loadPanameraModels(container) {
                 </a>
             </section>
     `;
+
+    questionSection.innerHTML = `
+        <h2>Чому Panamera?</h2>
+        <p>Витвір інженерного мистецтва, який поєднує в собі спортивний характер, елегантність і неперевершену комфортність. Завдяки потужним двигунам та інноваційним технологіям, Panamera забезпечує динамічне і при цьому комфортне водіння, яке неможливо порівняти з іншими седанами. Кожен деталь цього автомобіля — від стильного дизайну до високоякісних матеріалів інтер'єру — говорить про клас та престиж. Panamera ідеально підходить для тих, хто цінує не лише швидкість, але й елегантність та розкіш.</p>
+    `;
 }
 
-function load911Models(container) {
-  container.innerHTML = `
+function load911Models(container, questionSection) {
+    container.innerHTML = `
       <section class = "typeContainer">
                 <h1>Carrera Coupe</h1>
     
@@ -918,10 +935,15 @@ function load911Models(container) {
                     </div>
                 </a>
             </section>
-  `;
+    `;
+
+    questionSection.innerHTML = `
+        <h2>Чому Porsche 911?</h2>
+        <p>Класика спортивного автомобіля, яка завжди на крок попереду. Він втілює в собі ідеальну комбінацію бездоганного дизайну, інноваційних технологій і безмежної потужності. Завдяки своїй легендарній задній осі і точному керуванню, 911 дарує водієві неймовірне задоволення від швидкості і маневреності, зберігаючи при цьому максимальний комфорт і стабільність на дорозі. Це авто для тих, хто шукає не просто швидкість, а вишуканий стиль і відчуття абсолютного контролю. Porsche 911 — це більше, ніж машина. Це стиль життя.</p>
+    `;
 }
 
-function loadMacanModels(container) {
+function loadMacanModels(container, questionSection) {
     container.innerHTML = `
     <section class = "typeContainer">
                 <h1>Macan</h1>
@@ -1032,6 +1054,11 @@ function loadMacanModels(container) {
                     </div>
                 </a>
             </section>
+    `;
+
+    questionSection.innerHTML = `
+        <h2>Чому Macan?</h2>
+        <p>Компактний позашляховик, який поєднує в собі спортивну динаміку і універсальність кросовера. З його потужними двигунами, точним керуванням і високим рівнем комфорту Macan дарує водієві емоції, які зазвичай асоціюються з більш дорогими спортивними автомобілями. Чи на трасі, чи на важкому бездоріжжі, Macan готовий до будь-яких випробувань. Його елегантний дизайн, поєднаний з передовими технологіями та інноваційними системами безпеки, робить його ідеальним вибором для тих, хто цінує активний стиль життя, не поступаючись комфортом і розкішшю.</p>
     `;
 }
 

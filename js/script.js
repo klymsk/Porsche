@@ -96,21 +96,25 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function Converted() {
-    const currency = document.querySelector("#price");
-    const exchangeRate = 41;
+    const priceElement = document.getElementById("price");
+    const minPriceElement = document.getElementById("minPrice");
+    const maxPriceElement = document.getElementById("maxPrice");
 
-    currency.addEventListener('click', () => {
-        const priceText = currency.innerText;
-        const prices = priceText.match(/\d+/g); 
+    let currenccy = 43;
+    let flag = false;
 
-        if (prices && prices.length === 2) {
-            const minPrice = parseInt(prices[0].replace(/\s/g, '')); 
-            const maxPrice = parseInt(prices[1].replace(/\s/g, ''));
+    priceElement.addEventListener("click", function() {
+        const minPrice = parseInt(minPriceElement.textContent.replace(/\s+/g, ''));
+        const maxPrice = parseInt(maxPriceElement.textContent.replace(/\s+/g, ''));
 
-            const minPriceConverted = minPrice * exchangeRate;
-            const maxPriceConverted = maxPrice * exchangeRate;
+        const newMinPrice = minPrice * currenccy;
+        const newMaxPrice = maxPrice * currenccy;
 
-            currency.innerHTML = `${minPriceConverted.toLocaleString()} - <br> ${maxPriceConverted.toLocaleString()} грн`;
+        if (!flag) {
+            minPriceElement.textContent = newMinPrice.toLocaleString();
+            maxPriceElement.textContent = newMaxPrice.toLocaleString();
+
+            flag = true;
         }
     });
 }

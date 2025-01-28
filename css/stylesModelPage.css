@@ -942,6 +942,7 @@ article img {
     font-family: var(--font-family);
     font-size: 2rem;
     font-weight: var(--font-weight-bold);
+    text-align: center;
 }
 
 @media (max-width: 768px) {

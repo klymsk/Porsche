@@ -698,6 +698,7 @@ article .accessoriesHeader h2 {
     .accessoriesBrand {
         padding: 3rem 1.5rem;
         flex-direction: column;
+        overflow: hidden;
     }
 }
 
@@ -735,6 +736,12 @@ article .accessoriesHeader h2 {
 .brandBlockText.visible {
     opacity: 1;
     transform: translateY(0rem);
+}
+
+@media (max-width: 768px) {
+    .brandBlockText {
+        transform: translateX(10rem);
+    }
 }
 
 .brandBlockText h5 {

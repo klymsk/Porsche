@@ -577,6 +577,7 @@ article {
 @media (max-width: 768px) {
     .text p:first-of-type {
         font-size: 0.8rem;
+        text-align: center;
     }
 
     .text p:last-of-type {
@@ -643,6 +644,10 @@ article {
         order: 2;
         padding-left: 1rem;
         gap: 3rem;
+    }
+
+    .carToRight .infoPrice {
+        padding-right: 1rem;
     }
 }
 

@@ -10,19 +10,26 @@ const servicesMenu = document.querySelector(".servicesMenu");
 const buttonAccessories = document.querySelector("#buttonAccessories");
 const accessoriesMenu = document.querySelector(".accessoriesMenu");
 
-function isMobile() {
-    return window.innerWidth < 768; 
-}
+const carChoiceItems = document.querySelectorAll('.carChoice li');
 
 function AddRemMenu(button, menu) {
     button.addEventListener('mouseenter', () => {
         menu.classList.add('visible');
         menu.classList.remove('hidden');
     });
-
     button.addEventListener('mouseleave', () => {
-        menu.classList.remove('visible');
         menu.classList.add('hidden');
+        menu.classList.remove('visible');
+    });
+    
+    menu.addEventListener('mouseenter', () => {
+        menu.classList.add('visible');
+        menu.classList.remove('hidden');
+    });
+    
+    menu.addEventListener('mouseleave', () => {
+        menu.classList.add('hidden');
+        menu.classList.remove('visible');
     });
 }
 
@@ -30,8 +37,6 @@ AddRemMenu(buttonModel, subMenu);
 AddRemMenu(buttonContacts, contactsMenu);
 AddRemMenu(buttonServices, servicesMenu);
 AddRemMenu(buttonAccessories, accessoriesMenu);
-
-
 
 
 const observe = new IntersectionObserver((entries, observer) => {

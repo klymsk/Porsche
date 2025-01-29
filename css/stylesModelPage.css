@@ -681,6 +681,14 @@ article img {
         transform: translateY(-4rem);
         width: 100%;
     }
+
+    .generalInfo:nth-of-type(5) .text p {
+        transform: translateY(-2rem);
+    }
+
+    .generalInfo:nth-of-type(5) .text h2 {
+        transform: translateY(-4rem);
+    }
 }
 
 /* testDrive */

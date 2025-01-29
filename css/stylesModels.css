@@ -472,7 +472,8 @@ article {
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    justify-content: space-between;
+    height: 35rem;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease;
 }
@@ -482,7 +483,6 @@ article {
         padding: 2rem 0.5rem 1.5rem;
         width: 10rem;
         height: 20rem;
-        gap: 1rem;
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     }
 }
@@ -675,6 +675,7 @@ article {
 
     .question p {
         font-size: 0.5;
+        width: 100%;
     }
 }
 

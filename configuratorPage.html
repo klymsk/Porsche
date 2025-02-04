@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
-    <link rel = "stylesheet" href = "css/stylesModelPage.css">
+    <link rel = "stylesheet" href = "css/stylesConfigurator.css">
 </head>
 <body>
     <header>
@@ -20,31 +20,120 @@
 
     <main>
         <article>
-            <section class = "generalContainer">
-                <section class = "imgNameModel">
-                    <h2>Taycan 4S Cross Turismo</h2>
+            <section class = "imgNameModel">
+                <h2>Taycan 4S Cross Turismo</h2>
 
-                    <img src = "img/Porsche Taycan/Taycan4SCross.png" alt = "porsche">
-                </section>
-
-                <section class = "generalMenu">
-                    <div class = "colorsOut">
-                        <h3>Кольори екстер‘єру</h3>
-
-                        <label for = "metalicColors">Металік</label>
-                        <div class = "metalicColors">
-                            <div class = "colorContainer">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <img src = "img/Configurator/carPreViewConfig.png" alt = "porsche">
             </section>
+
+            <section class = "generalMenu">
+                <div class = "colorsOut">
+                    <h3>Кольори екстер‘єру</h3>
+
+                    <div class = "choiceColors">
+
+                        <label for = "colorsMetalic">Металік</label>
+                        <div class = "colorsMetalic">
+                            <ul class="color">
+                                <li>
+                                    <button data-color="white">White</button>
+                                </li>
+                                <li>
+                                    <button data-color="black">Black</button>
+                                </li>
+                                <li>
+                                    <button data-color="dark-blue">Dark Blue</button>
+                                </li>
+                                <li>
+                                    <button data-color="red">Carmine Red</button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <label for = "colorsSpecial">Металік</label>
+                        <div class = "colorsSpecial">
+                            <ul class="color">
+                                <li>
+                                    <button data-color="green">Shade Green</button>
+                                </li>
+                                <li>
+                                    <button data-color="yellow">Yellow</button>
+                                </li>
+                                <li>
+                                    <button data-color="guards-red">Guards Red</button>
+                                </li>
+                                <li>
+                                    <button data-color="gentian-blue">Gentian Blue</button>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            
 
             <section class = "navMenu">
+                <ul class = "navButtons">
+                    <li>Кольори екстер‘єру</li>
+                    <li>Кольори інтер‘єру</li>
+                    <li>Колеса</li>
+                    <li>Екстер‘єр</li>
+                    <li>Інтер‘єр</li>
+                    <li>Технології</li>
+                </ul>
 
+                <div class = "priceNav">
+                    <p><span>6 547 000</span> грн</p>
+
+                    <button type = "submit">
+                        <img src = "img/General/phoneButton.png">
+                    </button>
+                </div>
             </section>
         </article>
+
+        <section class = "headerResult">
+            <img src = "img/General/configuratorPorsche.png" alt = "porsche">
+
+            <div class = "headerText">
+                <p>Ваша мрія стає реальністю</p>
+                <h4>Підсумок</h4>
+            </div>
+        </section>
+
+        <section class = "resultSection">
+            <div class = "finalCheckSection">
+                <p>Ваша конфігурація Taycan 4S</p>
+
+                <div class = "resultCheck">
+                    <div class = "containerCheck">
+                        <p>Базова ціна</p>
+                        <p>6 547 000 грн</p>
+                    </div>
+
+                    <div class = "containerCheck">
+                        <p>Ціна обраних опцій</p>
+                        <p>453 000 грн</p>
+                    </div>
+
+                    <div class = "containerCheck">
+                        <p>Загальна ціна</p>
+                        <p>7 000 000 грн</p>
+                    </div>
+
+                    <p>*Важливо, остаточна ціна буде озвучена, лише після затвердження </p>
+                </div>
+            </div>
+
+            <div class = "detailCheckSection">
+                <p>Детальний чек</p>
+
+                <div class = "itemsCheck">
+                    
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>

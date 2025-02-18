@@ -26,7 +26,7 @@
                 <img src = "img/Configurator/carPreViewConfig.png" alt = "porsche">
             </section>
 
-            <section class = "generalMenu">
+            <section class = "generalMenu" id = "generalMenu">
                 <div class = "colorsOut">
                     <h3>Кольори екстер‘єру</h3>
 
@@ -64,6 +64,46 @@
                                 </li>
                                 <li>
                                     <button data-color="gentian-blue">Gentian Blue</button>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class = "colorsIn">
+                    <h3>Кольори інтер‘єру</h3>
+
+                    <div class = "choiceColors">
+
+                        <label for = "colorsMetalic">Класичні</label>
+                        <div class = "colorsMetalic">
+                            <ul class="color">
+                                <li>
+                                    <button data-color="brown-white">Brown - White</button>
+                                </li>
+                                <li>
+                                    <button data-color="brown-black">Brown - Black</button>
+                                </li>
+                                <li>
+                                    <button data-color="dark-blue - gray">Dark Blue - Gray</button>
+                                </li>
+                                <li>
+                                    <button data-color="red-gray">Carmine Red - Gray</button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <label for = "colorsSpecial">Особливі</label>
+                        <div class = "colorsSpecial">
+                            <ul class="color">
+                                <li>
+                                    <label for = "color1">Колір 1:</label>
+                                    <input type = "color" id = "color1" name = "color1" value = "#ffffff">
+                                </li>
+                                <li>
+                                    <label for = "color2">Колір 2:</label>
+                                    <input type = "color" id = "color2" name = "color1" value = "#ffffff">
                                 </li>
                             </ul>
                         </div>
@@ -129,19 +169,19 @@
             <div class = "detailCheckSection">
                 <p>Детальний чек</p>
 
-                <div class = "itemsCheck">
-                    <div class = "headerItemsCheck">
+                <div class = "headerItemsCheck">
+                    <div class = "labelContainer">
                         <label>Категорія</label>
                         <label>Опція</label>
-                        <label>Ціна</label>
                     </div>
+                    <label>Ціна</label>
                 </div>
 
                 <div class = "itemsList">
                     <p>Сидіння</p>
 
-                    <img src = "img/Configurator/configuratorSection.png">
-                    <label>Спортивні сидіння 4-позиційні</label>
+                    <img src = "img/Configurator/configuratorSection.png" class = "imgSection">
+                    <label for = "imgSection">Спортивні сидіння 4-позиційні</label>
 
                     <p>80 000 грн</p>
                 </div>

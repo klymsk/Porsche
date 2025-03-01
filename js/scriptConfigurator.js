@@ -27,3 +27,9 @@ function isVisible(className) {
 isVisible("footer img");
 isVisible(".text");
 isVisible(".resultCheck")
+isVisible(".imgNameModel img");
+
+
+const navChoice = document.getElementById("navChoice");
+const menuContainer = document.getElementById("menuContainer");
+

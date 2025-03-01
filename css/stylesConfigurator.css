@@ -118,6 +118,14 @@ article {
 .imgNameModel img {
     width: 100%;
     height: auto;
+    transform: translateY(-5rem);
+    transition: 0.3s all ease;
+    opacity: 0;
+}
+
+.imgNameModel img {
+    transform: translateX(0rem);
+    opacity: 1;
 }
 
 .generalMenu {
@@ -128,97 +136,103 @@ article {
     background-color: #FBF8EF;
     border-radius: 20px;
     font-family: var(--font-family);
-    max-width: 40%;
+    max-width: 30%;
+    max-height: 40rem;
+    overflow-y: hidden;
 }
 
-/* colorsOut */
+.generalMenu:hover {
+    overflow-y: auto;
+}
 
-.colorsOut {
+/* colors */
+
+.menuContainer {
     /*display: none*/
     display: none;
     flex-direction: column;
     gap: 5rem;
 }
 
+.menuContainer:nth-of-type(3) {
+    display: flex;
+}
+
 /*
-.colorsOut.activity {
+.menuContainer.activity {
     display: flex;
 }
 */
 
-.colorsOut ul {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 4rem;
-}
-
-.colorsOut button {
-    width: 100%;
-    height: 3rem;
-    border-radius: 20px;
-    border: none;
-}
-
-.choiceColors {
+.choiceContainer {
     display: flex;
     flex-direction: column;
     gap: 4rem;
+}
+
+.choiceType {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     padding: 0rem 1rem;
 }
 
-.colorsType {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-/* colorsIn */
-
-.colorsIn {
-    /* display: flex*/
-    display: none;
-    flex-direction: column;
-    gap: 5rem;
-}
-
-/*
-.colorsIn.activity {
-    display: flex;
-}
-*/
-
-.colorsIn ul {
+.choiceType ul {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 4rem;
+    gap: 2rem;
 }
 
-.colorsIn button {
-    width: 100%;
-    height: 3rem;
-    border-radius: 20px;
-    border: none;
-}
-
-.colorsIn ul:nth-of-type(1) li {
+.choiceType ul li {
     display: flex;
     flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem;
 }
 
-.colorsIn ul:nth-of-type(1) li input {
+.choiceType ul li:active {
+    background-color: #4B4B4B;
+    border-radius: 20px;
+}
+
+.choiceType ul p {
+    font-size: 0.8rem;
+    font-weight: 200;
+    padding: 0rem 1rem;
+}
+
+.choiceType ul p:active {
+    color: #FBF8EF
+}
+
+.choiceType button {
     width: 100%;
     height: 3rem;
     border-radius: 20px;
     border: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.choiceType ul:nth-of-type(1) li input {
+    width: 100%;
+    height: 3rem;
+    border-radius: 20px;
 }
 
 /* wheels */
 
-.wheelsType {
+.wheelsType li button {
+    height: 100%;
     display: flex;
-    gap: 3rem;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #4B4B4B;
+    padding: 2rem 1.5rem;
+}
+
+.wheelsType li p {
+    color: #FBF8EF;
 }
 
 .navMenu {

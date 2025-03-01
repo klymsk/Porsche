@@ -27,43 +27,53 @@
             </section>
 
             <section class = "generalMenu" id = "generalMenu">
-                <div class = "colorsOut">
+                <div class = "menuContainer" id = "menuContainer">
                     <h3>Кольори екстер‘єру</h3>
 
-                    <div class = "choiceColors">
+                    <div class = "choiceContainer">
 
-                        <label for = "colorsMetalic">Металік</label>
-                        <div class = "colorsMetalic">
+                        <div class = "choiceType">
+                            <label for = "color">Металік</label>
+
                             <ul class="color">
                                 <li>
-                                    <button data-color="white">White</button>
+                                    <button data-color="white"></button>
+                                    <p>White</p>
                                 </li>
                                 <li>
-                                    <button data-color="black">Black</button>
+                                    <button data-color="black"></button>
+                                    <p>Black</p>
                                 </li>
                                 <li>
-                                    <button data-color="dark-blue">Dark Blue</button>
+                                    <button data-color="dark-blue"></button>
+                                    <p>Dark Blue</p>
                                 </li>
                                 <li>
-                                    <button data-color="red">Carmine Red</button>
+                                    <button data-color="red"></button>
+                                    <p>Carmine Red</p>
                                 </li>
                             </ul>
                         </div>
 
-                        <label for = "colorsSpecial">Металік</label>
-                        <div class = "colorsSpecial">
+                        <div class = "choiceType">
+                            <label for = "color">Металік - Особливі</label>
+
                             <ul class="color">
                                 <li>
-                                    <button data-color="green">Shade Green</button>
+                                    <button data-color="green"></button>
+                                    <p>Shade Green</p>
                                 </li>
                                 <li>
-                                    <button data-color="yellow">Yellow</button>
+                                    <button data-color="yellow"></button>
+                                    <p>Yellow</p>
                                 </li>
                                 <li>
-                                    <button data-color="guards-red">Guards Red</button>
+                                    <button data-color="guards-red"></button>
+                                    <p>Guards Red</p>
                                 </li>
                                 <li>
-                                    <button data-color="gentian-blue">Gentian Blue</button>
+                                    <button data-color="gentian-blue"></button>
+                                    <p>Gentian Blue</p>
                                 </li>
                             </ul>
                         </div>
@@ -71,40 +81,44 @@
                     </div>
                 </div>
 
-                <div class = "colorsIn">
+                <div class = "menuContainer" id = "menuContainer">
                     <h3>Кольори інтер‘єру</h3>
 
-                    <div class = "choiceColors">
+                    <div class = "choiceContainer">
 
-                        <div class = "colorsType">
+                        <div class = "choiceType">
                             <label for = "color">Класичні</label>
 
                             <ul class="color">
                                 <li>
-                                    <button data-color="brown-white">Brown - White</button>
+                                    <button data-color="brown-white"></button>
+                                    <p>Brown - White</p>
                                 </li>
                                 <li>
-                                    <button data-color="brown-black">Brown - Black</button>
+                                    <button data-color="brown-black"></button>
+                                    <p>Brown - Black</p>
                                 </li>
                                 <li>
-                                    <button data-color="dark-blue - gray">Dark Blue - Gray</button>
+                                    <button data-color="dark-blue - gray"></button>
+                                    <p>Dark Blue - Gray</p>
                                 </li>
                                 <li>
-                                    <button data-color="red-gray">Carmine Red - Gray</button>
+                                    <button data-color="red-gray"></button>
+                                    <p>Carmine Red - Gray</p>
                                 </li>
                             </ul>
                         </div>
 
-                        <div class = "colorsType">
+                        <div class = "choiceType">
                             <label for = "color">Особливі</label>
                             <ul class="color">
                                 <li>
                                     <input type = "color" id = "color1" name = "color1" value = "#ffffff">
-                                    <label for = "color1">Колір 1</label>
+                                    <p>Колір 1</p>
                                 </li>
                                 <li>
                                     <input type = "color" id = "color2" name = "color1" value = "#ffffff">
-                                    <label for = "color2">Колір 2</label>
+                                    <p>Колір 2</p>
                                 </li>
                             </ul>
                         </div>
@@ -112,29 +126,29 @@
                     </div>
                 </div>
 
-                <div class = "wheels">
+                <div class = "menuContainer" id = "menuContainer">
                     <h3>Колеса</h3>
 
-                    <div class = "choiceColors">
+                    <div class = "choiceType">
 
-                        <div class = "colorsType">
+                        <div class = "choiceType">
                             <label for = "color">19/20 - дюймові</label>
 
                             <ul class="wheelsType">
                                 <li>
                                     <button data = "Carrera">
-                                        <p>Carrera</p>
-
                                         <img src = "img/Configurator/Carrera.png">
+
+                                        <p>Carrera</p>
 
                                         <p>0 грн</p>
                                     </button>
                                 </li>
                                 <li>
                                     <button data = "Carrera-Exclusive">
-                                        <p>Carrera Exclusive Design</p>
-
                                         <img src = "img/Configurator/CarreraExclusive.png">
+
+                                        <p>Carrera Exclusive</p>
 
                                         <p>0 грн</p>
                                     </button>
@@ -142,23 +156,23 @@
                             </ul>
                         </div>
 
-                        <div class = "colorsType">
+                        <div class = "choiceType">
                             <label for = "color">20/21 - дюймові</label>
                             <ul class="wheelsType">
                                 <li>
                                     <button data = "RS-Spyder">
-                                        <p>RS Spyder кольору Darksilver</p>
-
                                         <img src = "img/Configurator/RSSpyder.png">
+
+                                        <p>RS Spyder</p>
 
                                         <p>54 000 грн</p>
                                     </button>
                                 </li>
                                 <li>
                                     <button data = "Carrera-Classic">
-                                        <p>Класичні колеса Carrera</p>
-
                                         <img src = "img/Configurator/ClassicCarrera.png">
+
+                                        <p>Classic Carrera</p>
 
                                         <p>57 000 грн</p>
                                     </button>
@@ -173,9 +187,9 @@
 
             <section class = "navMenu">
                 <ul class = "navButtons">
-                    <li>Кольори екстер‘єру</li>
-                    <li>Кольори інтер‘єру</li>
-                    <li>Колеса</li>
+                    <li data-target = "exterior" id = "navChoice">Кольори екстер‘єру</li>
+                    <li data-target = "interior" id = "navChoice">Кольори інтер‘єру</li>
+                    <li data-target = "wheels" id = "navChoice">Колеса</li>
                     <li>Екстер‘єр</li>
                     <li>Інтер‘єр</li>
                     <li>Технології</li>

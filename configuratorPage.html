@@ -21,9 +21,9 @@
     <main>
         <article>
             <section class = "imgNameModel">
-                <h2>Taycan 4S Cross Turismo</h2>
+                <h2 id = "modelName">Taycan 4S Cross Turismo</h2>
 
-                <img src = "img/Configurator/carPreViewConfig.png" alt = "porsche">
+                <img src = "img/Configurator/carPreViewConfig.png" alt = "porsche" id = "modelImg">
             </section>
 
             <section class = "generalMenu" id = "generalMenu">
@@ -37,19 +37,19 @@
 
                             <ul class="color">
                                 <li>
-                                    <button data-color="white"></button>
+                                    <button data-color="white" data-price = "0"></button>
                                     <p>White</p>
                                 </li>
                                 <li>
-                                    <button data-color="black"></button>
+                                    <button data-color="black" data-price = "0"></button>
                                     <p>Black</p>
                                 </li>
                                 <li>
-                                    <button data-color="dark-blue"></button>
+                                    <button data-color="dark-blue" data-price = "1000"></button>
                                     <p>Dark Blue</p>
                                 </li>
                                 <li>
-                                    <button data-color="red"></button>
+                                    <button data-color="red" data-price = "1000"></button>
                                     <p>Carmine Red</p>
                                 </li>
                             </ul>
@@ -60,19 +60,19 @@
 
                             <ul class="color">
                                 <li>
-                                    <button data-color="green"></button>
+                                    <button data-color="green" data-price = "1700"></button>
                                     <p>Shade Green</p>
                                 </li>
                                 <li>
-                                    <button data-color="yellow"></button>
+                                    <button data-color="yellow" data-price = "1700"></button>
                                     <p>Yellow</p>
                                 </li>
                                 <li>
-                                    <button data-color="guards-red"></button>
+                                    <button data-color="guards-red" data-price = "2000"></button>
                                     <p>Guards Red</p>
                                 </li>
                                 <li>
-                                    <button data-color="gentian-blue"></button>
+                                    <button data-color="gentian-blue" data-price = "2000"></button>
                                     <p>Gentian Blue</p>
                                 </li>
                             </ul>
@@ -91,19 +91,19 @@
 
                             <ul class="color">
                                 <li>
-                                    <button data-color="brown-white"></button>
+                                    <button data-color="brown-white" data-price = "1000"></button>
                                     <p>Brown - White</p>
                                 </li>
                                 <li>
-                                    <button data-color="brown-black"></button>
+                                    <button data-color="brown-black" data-price = "1000"></button>
                                     <p>Brown - Black</p>
                                 </li>
                                 <li>
-                                    <button data-color="dark-blue - gray"></button>
+                                    <button data-color="dark-blue - gray" data-price = "1500"></button>
                                     <p>Dark Blue - Gray</p>
                                 </li>
                                 <li>
-                                    <button data-color="red-gray"></button>
+                                    <button data-color="red-gray" data-price = "1500"></button>
                                     <p>Carmine Red - Gray</p>
                                 </li>
                             </ul>
@@ -208,7 +208,7 @@
                 </ul>
 
                 <div class = "priceNav">
-                    <p><span>6 547 000</span> грн</p>
+                    <p><span id = "modelPrice">6 547 000</span></p>
 
                     <button type = "submit">
                         <img src = "img/General/phoneButton.png">
@@ -228,22 +228,22 @@
 
         <section class = "resultSection">
             <div class = "finalCheckSection">
-                <p>Ваша конфігурація Taycan 4S</p>
+                <p>Ваша конфігурація Porsche</p>
 
                 <div class = "resultCheck">
                     <div class = "containerCheck">
                         <p>Базова ціна</p>
-                        <p>6 547 000 грн</p>
+                        <p id = "modelPriceCheck">6 547 000 грн</p>
                     </div>
 
                     <div class = "containerCheck">
                         <p>Ціна обраних опцій</p>
-                        <p>453 000 грн</p>
+                        <p id = "optionsPrice">Ви не обрали опцій</p>
                     </div>
 
                     <div class = "containerCheck">
                         <p>Загальна ціна</p>
-                        <p>7 000 000 грн</p>
+                        <p id = "generalPrice">Ви не обрали опцій</p>
                     </div>
 
                     <p>*Важливо, остаточна ціна буде озвучена, лише після затвердження</p>

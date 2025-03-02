@@ -30,6 +30,48 @@ isVisible(".resultCheck")
 isVisible(".imgNameModel img");
 
 
-const navChoice = document.getElementById("navChoice");
-const menuContainer = document.getElementById("menuContainer");
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const navButton = document.querySelectorAll(".navButtons li"); 
+    const menuContainers = document.querySelectorAll(".menuContainer");
+
+    navButton.forEach(item => {
+        const button = item.querySelector("button");
+
+        button.addEventListener("click", function() {
+            const target = item.getAttribute("data-target");
+
+            menuContainers.forEach(container => {
+                container.style.display = "none";
+            });
+
+            switch(target) {
+                case "exterior":
+                    document.querySelector(".exteriorContainer").style.display = "flex";
+                    break;
+                case "interior":
+                    document.querySelector(".interiorContainer").style.display = "flex";
+                    break;
+                case "wheels":
+                    document.querySelector(".wheelsContainer").style.display = "flex";
+                    break;
+            }
+
+        });
+    });
+
+    const choiceType = document.querySelectorAll(".choiceType li")
+
+    choiceType.forEach(item => {
+        item.addEventListener("click", function() {
+            item.style.backgroundColor = "#FBF8EF";
+            item.style.borderRadius = "20px";
+            item.style.border = "1px solid #4B4B4B"
+        });
+    });
+});
+
+
+
 

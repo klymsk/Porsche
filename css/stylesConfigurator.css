@@ -215,51 +215,51 @@ article {
     border-radius: 20px;
 }
 
-.color li button[data-color="white"] {
+.color li button[data-model = "white"] {
     background-color: #DBDBDB; 
 }
 
-.color li button[data-color="black"] {
+.color li button[data-model = "black"] {
     background-color: #1C1C1C;
 }
 
-.color li button[data-color="dark-blue"] {
+.color li button[data-model = "dark-blue"] {
     background-color: #003556;
 }
 
-.color li button[data-color="red"] {
+.color li button[data-model = "red"] {
     background-color: #930002;
 }
 
-.color li button[data-color="green"] {
+.color li button[data-model = "green"] {
     background-color: #A4C4B8; 
 }
 
-.color li button[data-color="yellow"] {
+.color li button[data-model = "yellow"] {
     background-color: #CED27B;
 }
 
-.color li button[data-color="guards-red"] {
+.color li button[data-model = "guards-red"] {
     background-color: #CC0133;
 }
 
-.color li button[data-color="gentian-blue"] {
+.color li button[data-model = "gentian-blue"] {
     background-color: #01194B;
 }
 
-.color li button[data-color="brown-white"] {
+.color li button[data-model = "brown-white"] {
     background: linear-gradient(to right, #FFFFFF 50%, #493628 50%);
 }
 
-.color li button[data-color="brown-black"] {
+.color li button[data-model = "brown-black"] {
     background: linear-gradient(to right, #1C1C1C 50%, #493628 50%);
 }
 
-.color li button[data-color="dark-blue - gray"] {
+.color li button[data-model = "dark-blue - gray"] {
     background: linear-gradient(to right, #003556 50%, #3E3E3E 50%);
 }
 
-.color li button[data-color="red-gray"] {
+.color li button[data-model = "red-gray"] {
     background: linear-gradient(to right, #930002 50%, #3E3E3E 50%);
 }
 
@@ -451,9 +451,7 @@ article {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    opacity: 0;
-    transform: translateY(10rem);
-    transition: all 0.8s ease;
+    
 }
 
 .itemsList.visible {

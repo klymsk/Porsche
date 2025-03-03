@@ -1281,6 +1281,11 @@ article img {
     margin-bottom: 1rem;
 }
 
+.configuratorChoice a {
+    text-decoration: none;
+    color: #FBF8EF;
+}
+
 .color {
     display: flex;
     gap: 1rem;

@@ -105,20 +105,29 @@ const optionInput = document.querySelectorAll(".choiceContainer input");
 
 optionButtons.forEach(button => {
     button.addEventListener("click", function() {
+        
         if (button.classList.contains("selected")){
             alert("Оція вже була обрана.");
             return;
         }
 
         const productPrice = parseInt(button.getAttribute("data-price"), 10);
+        const sectionName = button.getAttribute("data-section");
+        const productName = button.getAttribute("data-model");
+
+        console.log("productName:", productName);
+        console.log("productPrice:", productPrice);
+        console.log("sectionName:", sectionName);
 
         optionTotalPrice += productPrice;
 
-        totalPrice += optionTotalPrice;
+        totalPrice += productPrice;
 
         button.classList.add("selected");
 
         updatePrice();
+        
+        updateDetailCheck(sectionName, productName, productPrice);
     });
 });
 
@@ -128,68 +137,27 @@ optionInput.forEach(input => {
 
         optionTotalPrice += productPriceInput;
 
-        totalPrice += optionTotalPrice;
+        totalPrice += productPriceInput;
 
         updatePrice();
     });
 });
 
-updatePrice();
 
+function updateDetailCheck(sectionName, optionName, price) {
+    const detailCheckSection = document.querySelector(".detailCheckSection");
 
+    const newDiv = document.createElement("div");
+    newDiv.classList.add("itemsList");
 
+    newDiv.innerHTML = `
+        <p>${sectionName}</p>
 
-// // Початкова ціна, що приходить з локального сховища (якщо вона вже встановлена)
-// let totalPrice = parseInt(document.getElementById("modelPrice").textContent.replace(/\D/g, ''), 10);
-// let optionsPrice = 0;
+        <label>${optionName}</label>
 
-// // Оновлення ціни на сторінці
-// function updatePrice() {
-//     document.getElementById("modelPrice").textContent = totalPrice + ' $'; // Загальна ціна моделі
-//     document.getElementById("generalPrice").textContent = totalPrice + ' $'; // Ціна моделі для перевірки
+        <p>${price} $</p>
+    `;
 
-//     // Оновлення ціни обраних опцій
-//     document.getElementById("optionsPrice").textContent = optionsPrice + ' $'; // Виводимо ціну опцій
-//     document.getElementById("totalPrice").textContent = (totalPrice + optionsPrice) + ' $'; // Загальна сума
-// }
-
-// // Оновлення вибраного кольору в підсумку
-// function updateSelectedColor(colorName) {
-//     const selectedColorElement = document.getElementById("selectedColor");
-//     selectedColorElement.textContent = `Вибраний колір: ${colorName}`;
-// }
-
-// // Обробка вибору кольору
-// const colorButtons = document.querySelectorAll(".color button");
-
-// colorButtons.forEach(button => {
-//     button.addEventListener("click", function() {
-//         // Отримуємо ціну з data-price
-//         const colorPrice = parseInt(button.getAttribute('data-price'), 10);
-
-//         // Додаємо ціну кольору до загальної
-//         totalPrice += colorPrice;
-//         optionsPrice += colorPrice;
-
-//         // Оновлюємо ціну на сторінці
-//         updatePrice();
-
-//         // Окреслюємо вибраний колір
-//         const allItems = button.closest('ul').querySelectorAll('li');
-//         allItems.forEach(item => {
-//             item.style.backgroundColor = ''; // скидаємо стиль для всіх
-//             item.style.border = '';
-//         });
-
-//         // Змінюємо стиль для вибраного елементу
-//         button.parentElement.style.backgroundColor = "#FBF8EF";
-//         button.parentElement.style.borderRadius = "20px";
-//         button.parentElement.style.border = "1px solid #4B4B4B";
-
-//         // Оновлюємо вибраний колір
-//         const colorName = button.getAttribute('data-color');
-//         updateSelectedColor(colorName);
-//     });
-// });
-
+    detailCheckSection.appendChild(newDiv);
+};
 

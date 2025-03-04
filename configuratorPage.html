@@ -180,6 +180,123 @@
                             </ul>
                         </div>
 
+                        
+                    </div>
+                </div>
+
+                <div class="exteriorMainContainer menuContainer" id = "wheels">
+                    <h3>Екстер‘єр</h3>
+
+                    <div class = "choiceType">
+
+                        <div class = "choiceType">
+                            <label for = "color">Кузов</label>
+
+                            <ul class="wheelsType">
+                                <li>
+                                    <button data = "Carrera" data-price = "3000" data-section = "Екстер‘єр" data-model = "Glass roof">
+                                        <img src = "img/Configurator/glassRoof.png">
+
+                                        <p>Glass roof</p>
+
+                                        <p>3000$</p>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button data = "Carrera-Exclusive" data-price = "1500" data-section = "Екстер‘єр" data-model = "Rearview mirror exclusive">
+                                        <img src = "img/Configurator/rearviewMirrorExclusive.png">
+
+                                        <p>Rearview mirror exclusive</p>
+
+                                        <p>1500$</p>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class = "choiceType">
+                            <label for = "color">Кермо / важіль КПП</label>
+                            <ul class="wheelsType">
+                                <li>
+                                    <button data = "RS-Spyder" data-price = "1200$" data-section = "Екстер‘єр" data-model = "GT Sport steering wheel">
+                                        <img src = "img/Configurator/steeringWheelGT.png">
+
+                                        <p>GT Sport steering wheel</p>
+
+                                        <p>1200$</p>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button data = "Carrera-Classic" data-price = "800$" data-section = "Екстер‘єр" data-model = "PDK Exclusive">
+                                        <img src = "img/Configurator/pdkExclusive.png">
+
+                                        <p>PDK Exclusive</p>
+
+                                        <p>800$</p>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        
+                    </div>
+                </div>
+
+                <div class="interiorMainContainer menuContainer" id = "wheels">
+                    <h3>Інтер‘єр</h3>
+
+                    <div class = "choiceType">
+
+                        <div class = "choiceType">
+                            <label for = "color">Пакети інтер‘єру</label>
+
+                            <ul class="wheelsType">
+                                <li>
+                                    <button data = "Exclusive manufaktur" data-price = "4000" data-section = "Інтер‘єр" data-model = "Exclusive manufaktur">
+                                        <img src = "img/Configurator/ExclusiveManufaktur.png">
+
+                                        <p>Exclusive manufaktur</p>
+
+                                        <p>4000$</p>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button data = "Carrera-Exclusive" data-price = "3300" data-section = "Інтер‘єр" data-model = "Sport manufaktur">
+                                        <img src = "img/Configurator/SportManufaktur.png">
+
+                                        <p>Sport manufaktur</p>
+
+                                        <p>3300$</p>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class = "choiceType">
+                            <label for = "color">Кермо / важіль КПП</label>
+                            <ul class="wheelsType">
+                                <li>
+                                    <button data = "RS-Spyder" data-price = "1200$" data-section = "Інтер‘єр" data-model = "GT Sport steering wheel">
+                                        <img src = "img/Configurator/steeringWheelGT.png">
+
+                                        <p>GT Sport steering wheel</p>
+
+                                        <p>1200$</p>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button data = "Carrera-Classic" data-price = "800$" data-section = "Інтер‘єр" data-model = "PDK Exclusive">
+                                        <img src = "img/Configurator/pdkExclusive.png">
+
+                                        <p>PDK Exclusive</p>
+
+                                        <p>800$</p>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        
                     </div>
                 </div>
             </section>
@@ -196,10 +313,10 @@
                     <li data-target="wheels" id="navChoice">
                         <button>Колеса</button>
                     </li>
-                    <li>
+                    <li data-target = "mainExterior" id = "navChoice">
                         <button>Екстер‘єр</button>
                     </li>
-                    <li>
+                    <li data-target = "mainInterior" id = "navChoice">
                         <button>Інтер‘єр</button>
                     </li>
                     <li>

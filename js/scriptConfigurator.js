@@ -56,6 +56,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 case "wheels":
                     document.querySelector(".wheelsContainer").style.display = "flex";
                     break;
+                case "mainExterior":
+                    document.querySelector(".exteriorMainContainer").style.display = "flex";
+                    break;
+                case "mainInterior":
+                    document.querySelector(".interiorMainContainer").style.display = "flex";
+                    break;
             }
 
         });
@@ -157,6 +163,8 @@ function updateDetailCheck(sectionName, optionName, price) {
 
         <p>${price} $</p>
     `;
+
+    detailCheckSection.classList.add("active");
 
     detailCheckSection.appendChild(newDiv);
 };

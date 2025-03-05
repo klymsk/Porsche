@@ -62,6 +62,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 case "mainInterior":
                     document.querySelector(".interiorMainContainer").style.display = "flex";
                     break;
+                case "technology":
+                    document.querySelector(".technologyContainer").style.display = "flex";
+                    break;
             }
 
         });
@@ -168,4 +171,17 @@ function updateDetailCheck(sectionName, optionName, price) {
 
     detailCheckSection.appendChild(newDiv);
 };
+
+document.getElementById("phoneButton").addEventListener("click", function() {
+    const message = document.querySelector(".buttonActive");
+
+    if (message.style.visibility === "hidden") {
+        message.style.visibility = "visible";
+    }
+    else {
+        message.style.visibility = "hidden";
+    }
+});
+
+
 

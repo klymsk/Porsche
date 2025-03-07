@@ -83,12 +83,6 @@ main {
     margin-bottom: 16rem;
 }
 
-@media (max-width: 768px) {
-    main {
-        padding: 0rem 1rem;
-    }
-}
-
 /* article */
 
 article {
@@ -99,6 +93,14 @@ article {
     padding: 2rem 3rem 10rem;
 }
 
+@media (max-width: 768px) {
+    article {
+        padding: 4rem 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .imgNameModel {
     display: flex;
     flex-direction: column;
@@ -106,6 +108,14 @@ article {
     gap: 10rem;
     width: 70%;
     padding: 3rem 0rem;
+}
+
+@media (max-width: 768px) {
+    .imgNameModel {
+        width: 90%;
+        gap: 4rem;
+        padding: 0rem;
+    }
 }
 
 .imgNameModel h2 {
@@ -128,6 +138,12 @@ article {
     opacity: 1;
 }
 
+@media (max-width: 768px) {
+    .imgNameModel h2 {
+        font-size: 0.7rem;
+    }
+}
+
 .generalMenu {
     display: flex;
     flex-direction: column;
@@ -145,6 +161,14 @@ article {
     overflow-y: auto;
 }
 
+@media (max-width: 768px) {
+    .generalMenu {
+        max-width: 100%;
+        max-height: 25rem;
+        padding: 10% 10%;
+    }
+}
+
 /* colors */
 
 .menuContainer {
@@ -156,6 +180,12 @@ article {
 
 .menuContainer:nth-of-type(1) {
     display: flex;
+}
+
+@media (max-width: 768px) {
+    .menuContainer {
+        gap: 3rem;
+    }
 }
 
 /*
@@ -205,6 +235,16 @@ article {
     border-radius: 20px;
     box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);
     border: none;
+}
+
+@media (max-width: 768px) {
+    .choiceType {
+        padding: 0rem;
+    }
+
+    .choiceType ul p {
+        font-size: 0.7rem;
+    }
 }
 
 /* setColors to buttons */
@@ -300,6 +340,13 @@ article {
     padding: 1rem 2rem;
 }
 
+@media (max-width: 768px) {
+    .navMenu {
+        margin: 0rem 1rem;
+        padding: 1rem 1rem;
+    }
+}
+
 .navMenu ul {
     list-style: none;
     display: flex;
@@ -313,6 +360,20 @@ article {
     text-decoration: underline;
     border: none;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navMenu ul {
+        gap: 1rem;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 1rem;
+        flex-wrap: nowrap;
+    }
+
+    .navMenu ul li button {
+        font-size: 0.7rem;
+    }
 }
 
 .priceNav {
@@ -332,6 +393,20 @@ article {
     border-radius: 20px;
     background-color: #D9D9D9;
     border: none;
+}
+
+@media (max-width: 768px) {
+    .priceNav {
+        gap: 0.5rem;
+    }
+
+    .priceNav p {
+        font-size: 1rem;
+    }
+
+    .priceNav button {
+        padding: 0.5rem 0.8rem;
+    }
 }
 
 .buttonActive {
@@ -373,6 +448,12 @@ article {
     gap: 8rem;
     flex-direction: column;
     align-items: center;
+}
+
+@media (max-width: 768px) {
+    .headerResult img {
+        width: 100%;
+    }
 }
 
 .headerText {

@@ -317,7 +317,15 @@ function loadModelInfo(model) {
         questionImg.src = "img/Porsche Macan/Macan.jpg";
         break;
     case 'other':
-        modelArticle.innerHTML = `<p class = "otherModelsMessage">На даний момент, немає інших моделей<br>Чекайте оновлень.<p>`
+        const mainSection = document.getElementById("main");
+
+        mainSection.innerHTML = `
+        <article id = "article">
+        </article>
+        `;
+
+        const updateArticle = document.getElementById("article");
+        updateArticle.innerHTML = `<p class = "otherModelsMessage">На даний момент, немає інших моделей<br>Чекайте оновлень.<p>`
         break;
     default:
       container.innerHTML = '<p>Моделі для цієї категорії не знайдено!</p>';
@@ -904,7 +912,7 @@ function load911Models(container, questionSection) {
                 </a>
             </section>
 
-            <section class = "typeContainer">
+            <section class = "special typeContainer">
                 <h1>Special</h1>
     
                 <a href = "modelPage.html" class = "carLink" onclick="saveModelData('TaycanSportTurismo')">
@@ -924,6 +932,23 @@ function load911Models(container, questionSection) {
                     </div>
                 </a>
     
+                <a href = "modelPage.html" class = "carLink" onclick="saveModelData('Taycan4SSportTurismo')">
+                    <div class = "carContainer">
+                        <img src = "img/Porsche 911/TurboSpecial50YearsModel.png" alt = "Taycan">
+        
+                        <h2>Turbo 50 Years</h2>
+        
+                        <div class = "addInfo">
+                            <p>Потужність (к/с): 650</p>
+                            <p>Макс. швид.: 330 км/год</p>
+                            <p>Прискорення: 2,7 с</p>
+                            <p>Запас ходу: ~550 км</p>
+                        </div>
+                        
+                        <h3>від 310 000$</h3>
+                    </div>
+                </a>
+
                 <a href = "modelPage.html" class = "carLink" onclick="saveModelData('Taycan4SSportTurismo')">
                     <div class = "carContainer">
                         <img src = "img/Porsche 911/TurboSpecial50YearsModel.png" alt = "Taycan">

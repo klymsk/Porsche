@@ -64,7 +64,7 @@ isVisible(".stepBlock");
 function changeMap() {
     const tempCity = document.getElementById("citySelect");
     const selectedCity = tempCity.value;
-    const map = document.getElementById("map");
+    const map = document.getElementById("map2");
     const street = document.getElementById("street");
 
 

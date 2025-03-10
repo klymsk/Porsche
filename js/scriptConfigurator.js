@@ -162,7 +162,7 @@ function updateDetailCheck(sectionName, optionName, price) {
     newDiv.innerHTML = `
         <p>${sectionName}</p>
 
-        <label>${optionName}</label>
+        <p>${optionName}</p>
 
         <p>${price} $</p>
     `;

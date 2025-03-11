@@ -344,6 +344,8 @@ article {
     list-style: none;
     display: flex;
     gap: 3rem;
+    width: 70%;
+    overflow-x: auto;
 }
 
 .navMenu ul li button {

@@ -278,6 +278,10 @@ function editHtml() {
 window.addEventListener('load', editHtml);
 window.addEventListener('resize', editHtml);
 
+const today = new Date().toISOString().split('T')[0];
+  
+document.getElementById('dateInput').setAttribute('min', today);
+
 
 
 
